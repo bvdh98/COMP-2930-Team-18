@@ -39,6 +39,9 @@
     border-radius: 50%;
     margin: 0 auto;
     bottom: 70px;
+    background-image: url(https://asphaltgold.de/media/catalog/product/cache/1/image/930x669/0f396e8a55728e79b48334e699243c07/s/t/st_ssy_stock_cap_light_pink_1.jpg);
+    background-position: center;
+    background-size: 150%;
 }
 
 #useraverage {
@@ -57,6 +60,10 @@
     padding: 5px;
     margin: 0 auto;
     border-radius: 20px;
+}
+
+#userlist:hover {
+    background-color: lightblue;
 }
 
 
