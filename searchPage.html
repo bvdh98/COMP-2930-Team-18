@@ -1,0 +1,181 @@
+<html>
+
+<head>
+    <title>SearchPage</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/searchPageCss.css">
+    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <!--    <link href="css/bootstrap.min.css" rel="stylesheet">-->
+    <!--    <link href="css/mdb.min.css" rel="stylesheet">-->
+    <!--    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">-->
+    <style>
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <!--
+    <div class="container-fluid">
+
+        <div class="col-sm-3">
+
+        </div>
+        <div class="col-sm-3">
+            <img src="./Pictures/Logo.png" alt="logo" id="logo">
+        </div>
+        <div class="col-sm-3">
+
+        </div>
+    </div>
+-->
+
+
+
+
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3> Profile</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p> User Axxx</p>
+                <li class="active">
+                    <a href="#">Home</a>
+
+                </li>
+                <li>
+                    <a href="#">About</a>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">History</a>
+                </li>
+                <!--
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+-->
+            </ul>
+
+
+        </nav>
+        <!-- Page Content -->
+        <div id="content">
+
+            <nav>
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+
+
+                </div>
+            </nav>
+
+            <div class="text-center">
+                <img src="./Pictures/Logo.png" class="rounded" alt="logo">
+            </div>
+            <!--
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+-->
+            <div class="row justify-content-center" id="searchBar" >
+                <div class="col-12 col-md-10 col-lg-8">
+                    <form class="card card-sm">
+                        <div class="card-body row no-gutters align-items-center">
+                            <!--
+                            <div class="col-auto">
+                                <i class="fas fa-search h4 text-body"></i>
+                            </div>
+-->
+                            <!--end of col-->
+                            <div class="col" id="searchBarKeyWord">
+                                <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search keywords or upload photo">
+
+                            </div>
+
+
+                            <!--
+                            <div class="box">
+                                <div class="js--image-preview"></div>
+                                <div class="upload-options">
+                                    <label>
+                                        <input type="file" class="image-upload" accept="image/*" />
+                                    </label>
+                                </div>
+                            </div>
+-->
+
+                            <!--end of col-->
+                            <div class="col-auto">
+                                <button class="btn btn-lg btn-success" type="submit" id="submit">Search</button>
+                            </div>
+                            <div class="col-auto">
+                                <button class="btn btn-lg btn-success" type="submit" id="camera"><i class="fa fa-camera"></i></button>
+
+                            </div>
+                            <!--end of col-->
+                        </div>
+                    </form>
+                </div>
+                <!--end of col-->
+            </div>
+        </div>
+    </div>
+
+
+    <!--bootstrap-->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Toggling-->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#sidebarCollapse').on('click', function() {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#camera').on('click', function() {
+//                $('#submit').toggleClass('active');
+//                $(this).toggleClass('active');
+                $("#submit").css("display","none");
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
