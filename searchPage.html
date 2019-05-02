@@ -40,9 +40,9 @@
 
     <div class="wrapper">
         <!-- Sidebar Holder -->
-        <nav id="sidebar">
+        <nav id="sidebar" class="active">
             <div class="sidebar-header">
-                <h3> Profile</h3>
+                <h3> FoodScore</h3>
             </div>
 
             <ul class="list-unstyled components">
@@ -96,7 +96,7 @@
             </nav>
 
             <div class="text-center">
-                <img src="./Pictures/Logo.png" class="rounded" alt="logo">
+                <img src="./Pictures/Logo.png" id="camera" class="rounded" alt="logo">
             </div>
             <!--
             <form class="form-inline">
@@ -104,7 +104,7 @@
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
 -->
-            <div class="row justify-content-center" id="searchBar" >
+            <div class="row justify-content-center" id="searchBar">
                 <div class="col-12 col-md-10 col-lg-8">
                     <form class="card card-sm">
                         <div class="card-body row no-gutters align-items-center">
@@ -132,11 +132,15 @@
 -->
 
                             <!--end of col-->
-                            <div class="col-auto">
+                            <div class="col-auto" class="displayNone" id="submit">
                                 <button class="btn btn-lg btn-success" type="submit" id="submit">Search</button>
                             </div>
                             <div class="col-auto">
-                                <button class="btn btn-lg btn-success" type="submit" id="camera"><i class="fa fa-camera"></i></button>
+
+                                <button class="btn btn-lg btn-success" onclick="myFunction()">
+                                    <i class="fa fa-camera" id="camera"></i>
+
+                                </button>
 
                             </div>
                             <!--end of col-->
@@ -145,6 +149,7 @@
                 </div>
                 <!--end of col-->
             </div>
+
         </div>
     </div>
 
@@ -160,22 +165,26 @@
         $(document).ready(function() {
             $('#sidebarCollapse').on('click', function() {
                 $('#sidebar').toggleClass('active');
-                $(this).toggleClass('active');
             });
         });
-
     </script>
+
+    <!--
     <script type="text/javascript">
         $(document).ready(function() {
             $('#camera').on('click', function() {
-//                $('#submit').toggleClass('active');
-//                $(this).toggleClass('active');
-                $("#submit").css("display","none");
+
+                $('#submit').addClass('displayNone');
+
+
             });
         });
-
+    </script>
+-->
+    <script>
+        function myFunction() {
+            document.getElementById("submit").style.display = "none";
+        }
     </script>
 
-</body>
-
-</html>
+</body></html>
