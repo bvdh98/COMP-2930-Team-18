@@ -9,15 +9,27 @@
 
  #submit {
      margin: 1vh !important;
+     
+
  }
 
-#camera{
-    font-size:32px;
-}
+ #camera {
+     font-size: 32px;
+ }
+
+ .displayNone {
+     display: none !important;
+ }
 
 
 
-
+ .form-control-borderless:hover,
+ .form-control-borderless:active,
+ .form-control-borderless:focus {
+     border: none;
+     outline: none;
+     box-shadow: none;
+ }
 
 
 
@@ -140,8 +152,8 @@
  }
 
  ul ul a {
-     font-size: 0.9em !important;
-     padding-left: 30px !important;
+     font-size: 0.9em ;
+     padding-left: 30px ;
      background: #6d7fcc;
  }
 
@@ -151,7 +163,7 @@
 
  ul.CTAs a {
      text-align: center;
-     font-size: 0.9em !important;
+     font-size: 0.9em ;
      display: block;
      border-radius: 5px;
      margin-bottom: 5px;
@@ -164,8 +176,8 @@
 
  a.article,
  a.article:hover {
-     background: #6d7fcc !important;
-     color: #fff !important;
+     background: #6d7fcc ;
+     color: #fff ;
  }
 
 
