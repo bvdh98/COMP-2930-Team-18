@@ -1,4 +1,6 @@
- #image {
+
+
+#image {
      text-align: center;
  }
 
@@ -254,6 +256,16 @@
      opacity: 1;
      margin: 5px auto;
  }
+
+    
+
+@media (max-width: 430px) {
+    
+    #commontips {
+        display: none;
+    }
+    
+}
 
 
  /* ---------------------------------------------------
