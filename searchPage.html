@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./css/searchPageCss.css">
-    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
     <!--    <link href="css/bootstrap.min.css" rel="stylesheet">-->
@@ -79,7 +78,7 @@
             </nav>
 
             <div class="text-center">
-                <img src="./Pictures/Logo.png" id="camera" class="rounded" alt="logo">
+                <img src="./Pictures/Logo.png" id="logo" class="rounded" alt="logo">
             </div>
             <!--
             <form class="form-inline">
@@ -87,53 +86,80 @@
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
 -->
+
+
             <div class="row justify-content-center" id="searchBar">
+
                 <div class="col-12 col-md-10 col-lg-8">
-                    <form class="card card-sm">
-                        <div class="card-body row no-gutters align-items-center">
-                            <!--
-                            <div class="col-auto">
-                                <i class="fas fa-search h4 text-body"></i>
-                            </div>
--->
+
+
+                    <form class="card card-sm ">
+
+                        <div class="card-body row no-gutters align-items-center" id="tryImg">
+
                             <!--end of col-->
-                            <div class="col" id="searchBarKeyWord">
+                            <div class="col" id="trysearchBarKeyWord">
                                 <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search keywords or upload photo">
 
                             </div>
 
 
-                            <!--
-                            <div class="box">
-                                <div class="js--image-preview"></div>
-                                <div class="upload-options">
-                                    <label>
-                                        <input type="file" class="image-upload" accept="image/*" />
-                                    </label>
-                                </div>
-                            </div>
--->
+
 
                             <!--end of col-->
-                            <div class="col-auto" class="displayNone" id="submit">
+                            <div class="col-auto" id="trysearch">
                                 <button class="btn btn-lg btn-success" type="submit" id="submit">Search</button>
                             </div>
-                            <div class="col-auto">
+                            <div class="col-auto" id="trycamera">
 
-                                <button class="btn btn-lg btn-success" onclick="myFunction()">
+                                <button type="button" class="btn btn-lg btn-success">
                                     <i class="fa fa-camera" id="camera"></i>
 
                                 </button>
 
                             </div>
+
+
+                            <div class="uploadimg">
+                                <!--                                <div class="js--image-preview"></div>-->
+                                <div class="upload-options">
+                                    <label>
+                                        <input type="file" class="image-upload" accept="image/*" id="imageUpload" onchange="loadFile(event)">
+
+
+<!--
+                                        <img id="output" class="img-fluid" />
+                                        <script>
+                                            //                                            preview img
+                                            let loadFile = function(event) {
+                                                let output = document.getElementById('output');
+                                                output.src = URL.createObjectURL(event.target.files[0]);
+                                                //submit image.
+                                                output.submit();
+
+                                            };
+
+                                        </script>
+-->
+
+                                    </label>
+                                </div>
+                            </div>
+
+
+
                             <!--end of col-->
                         </div>
+
                     </form>
+
                 </div>
                 <!--end of col-->
+
             </div>
 
         </div>
+
     </div>
 
 
@@ -153,24 +179,37 @@
 
     </script>
 
-    <!--
+
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#camera').on('click', function() {
+            $('#logo').on('click', function() {
 
                 $('#submit').addClass('displayNone');
+                $('#trysearchBarKeyWord').hide();
+
+
+            });
+            $('#trycamera').on('click', function() {
+
+                $('.uploadimg').show();
+                $('#trysearchBarKeyWord').hide();
+                $('#trysearch').hide();
+                $('#tryImg').addClass("forImageUpload");
 
 
             });
         });
+
     </script>
--->
+
+    <!--
     <script>
         function myFunction() {
             document.getElementById("submit").style.display = "none";
         }
 
     </script>
+-->
 
 </body>
 
