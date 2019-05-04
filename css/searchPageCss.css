@@ -248,8 +248,15 @@
  /*Media 500*/
  @media(max-width: 500px) {
      #left{
-         font-size: 30px;
-         
+         font-size: 40px;
+         color: gray;
+/*         background-color: darkgray;*/
+         padding: 0.1vh;
+
+     }
+     #left1{
+                  font-size: 40px;
+
      }
 /*
      body {
@@ -282,6 +289,7 @@
 
      #sidebarCollapse1 {
          display: block;
+
      }
 
      #sidebar1.active {
@@ -289,13 +297,13 @@
      }
 
      #dismiss1 {
-         width: 35px;
-         height: 30px;
+         width: 40px;
+         height: 40px;
          line-height: 35px;
          text-align: center;
-         background: #7386D5;
+/*         background: #7386D5;*/
          position: absolute;
-         top: 20px;
+         top: 18px;
          right: 10px;
          cursor: pointer;
          -webkit-transition: all 0.3s;
