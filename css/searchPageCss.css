@@ -9,8 +9,10 @@
  #submit {
      margin: 1vh !important;
 
-
  }
+#logoM{
+    display: none;
+}
 
  #camera {
      font-size: 32px;
@@ -247,18 +249,20 @@
 
  /*Media 500*/
  @media(max-width: 500px) {
-     #left{
+     #left {
          font-size: 40px;
          color: gray;
-/*         background-color: darkgray;*/
+         /*         background-color: darkgray;*/
          padding: 0.1vh;
 
      }
-     #left1{
-                  font-size: 40px;
+
+     #left1 {
+         font-size: 40px;
 
      }
-/*
+
+     /*
      body {
          background-color: aqua;
      }
@@ -281,6 +285,7 @@
          transition: all 0.3s;
          overflow-y: scroll;
          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+         height: 100vh;
      }
 
      #sidebarCollapse {
@@ -301,7 +306,7 @@
          height: 40px;
          line-height: 35px;
          text-align: center;
-/*         background: #7386D5;*/
+         /*         background: #7386D5;*/
          position: absolute;
          top: 18px;
          right: 10px;
@@ -405,6 +410,26 @@
          color: #fff !important;
      }
 
+     #tryImg{
+         display: block;
+     }
+     #trysearch{
+        margin: 1vh 1vh 1vh 12vh !important;
+         width: 13vh;
+         display: inline;
+
+     }
+     #trycamera{
+         
+         width: 13vh;
+         display: inline;
+     }
+     #logoM{
+         display: block;
+     }
+     #logo{
+         display: none;
+     }
  }
 
 
