@@ -7,15 +7,12 @@
     <link rel="stylesheet" type="text/css" href="./css/profile.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-    <style>
-
-
-    </style>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
 
 </head>
 
 <body>
-
+    
     <div class="wrapper">
         <!-- Sidebar Holder -->
         <nav id="sidebar">
@@ -56,17 +53,37 @@
                 <img id="logo" src="./Pictures/Logo.png" class="rounded" alt="logo">
             </div>
             
-            <div id="userid">My Username</div>
+            <div id="userid"></div>
                 <div id="userprofile"></div>
             
-            <div id="useraverage">Average Score: 8</div>
+            <div id="useraverage">Average Score: <span id="calcAverage"></span></div>
             <div id="userlist">Your List</div>
         </div>
     </div>
+    
+    
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-auth.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAqKxtkDyuT3IKCrtXsEW7eWMG97DL6PFw",
+    authDomain: "comp2930-3639b.firebaseapp.com",
+    databaseURL: "https://comp2930-3639b.firebaseio.com",
+    projectId: "comp2930-3639b",
+    storageBucket: "comp2930-3639b.appspot.com",
+    messagingSenderId: "773056439844",
+    appId: "1:773056439844:web:5803d640de8e0613"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
 
 
     <!--bootstrap-->
 
+    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -80,8 +97,6 @@
         });
 
     </script>
-    
-    
     <script src="./js/profile.js"></script>
 
 </body>
