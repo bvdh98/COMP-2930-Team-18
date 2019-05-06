@@ -1,8 +1,20 @@
+@media (min-width: 1200px) {
 #image {
-    text-align: center;
+    text-align: center !important;
     }
 
 #logo {
-    width: 38%;
-    height: auto;
+    width: 38% !important;
+    height: auto !important;
     }
+}
+@media (min-width: 200px) {
+    #image {
+    text-align: center;
+    }
+    
+    #logo {
+        width: 75%;
+    }
+
+}

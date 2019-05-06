@@ -1,4 +1,4 @@
-@media (min-width: 1200px) { 
+@media (min-width: 1200px) {
 
 #image {
      text-align: center;
@@ -20,7 +20,14 @@
 
 
 
-#sidebarCollapse {
+
+
+
+ @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+/* Start */
+    
+    #sidebarCollapse {
         position: relative;
         right: 30px;
         z-index: 1;
@@ -30,57 +37,47 @@
         font-size: 30pt;
     }
     
-    #sidebarlist li {
+#sidebarlist li {
         font-size: 24pt !important;
     }
 
-
- @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-
-/* Start */
-#userid {
+#commontips {
+    display: block !important;
     text-align: center;
     position: relative;
+    font-size: 30pt !important;
+    color: grey;
     bottom: 75px;
-    font-size: 24pt !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-#userprofile {
-    border: solid black 1px;
-    position: relative;
-    height: 130px !important;
-    width: 130px !important;
-    border-radius: 50%;
-    margin: 0 auto;
-    bottom: 70px;
-    background-image: url(https://asphaltgold.de/media/catalog/product/cache/1/image/930x669/0f396e8a55728e79b48334e699243c07/s/t/st_ssy_stock_cap_light_pink_1.jpg);
-    background-position: center;
-    background-size: 150%;
-}
-
-#useraverage {
+#help1 {
     text-align: center;
     position: relative;
-    bottom: 65px;
     font-size: 24pt !important;
+    bottom: 75px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-#userlist {
-    position: relative;
+#help2 {
     text-align: center;
+    position: relative;
     font-size: 24pt !important;
-    border: solid black 1px;
-    width: 200px;
-    padding: 5px;
-    margin: 0 auto;
-    border-radius: 20px;
-    top: 0px !important;
+    bottom: 75px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-#userlist:hover {
-    background-color: lightblue;
+#help3 {
+    text-align: center;
+    position: relative;
+    font-size: 24pt !important;
+    bottom: 75px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
-
 
 /* End */
  body {
@@ -139,8 +136,8 @@
 
 
  #sidebar {
-     min-width: 250px;
-     max-width: 250px;
+     min-width: 250px !important;
+     max-width: 250px !important;
      background: #7386D5;
      color: #fff;
      transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
@@ -276,13 +273,9 @@
  }
 }
 
-
-
-
-
 @media (min-width: 200px) {
     
-    #image {
+#image {
      text-align: center;
  }
 
@@ -302,64 +295,62 @@
 
 
 
-#sidebarCollapse {
-        position: relative;
-        right: 30px;
-        z-index: 1;
-    }
-    
-    #sidebarheader {
-        font-size: 30pt;
-    }
-    
-    #sidebarlist li {
-        font-size: 24pt !important;
-    }
-
-
  @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
 /* Start */
-#userid {
+
+    #sidebarCollapse {
+        position: relative;
+        right: 30px;
+        z-index: 1;
+        width: 10px;
+    }
+    
+#sidebarheader {
+        font-size: 30pt;
+    }
+
+#commontips {
+    display: block !important;
     text-align: center;
     position: relative;
     font-size: 50pt;
+    color: grey;
+    bottom: 75px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-#userprofile {
-    border: solid black 1px;
-    position: relative;
-    height: 300px;
-    width: 300px;
-    border-radius: 50%;
-    margin: 0 auto;
-    background-image: url(https://asphaltgold.de/media/catalog/product/cache/1/image/930x669/0f396e8a55728e79b48334e699243c07/s/t/st_ssy_stock_cap_light_pink_1.jpg);
-    background-position: center;
-    background-size: 150%;
-}
-
-#useraverage {
+#help1 {
     text-align: center;
     position: relative;
-    font-size: 50pt;
+    font-size: 42pt;
+    bottom: 75px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-#userlist {
-    position: relative;
+#help2 {
     text-align: center;
-    font-size: 40pt;
-    border: solid black 1px;
-    width: 300px;
-    padding: 5px;
-    margin: 0 auto;
-    border-radius: 20px;
-    top: 100px;
+    position: relative;
+    font-size: 42pt;
+    bottom: 75px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-#userlist:hover {
-    background-color: lightblue;
+#help3 {
+    text-align: center;
+    position: relative;
+    font-size: 42pt;
+    bottom: 75px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
+    #sidebarlist li {
+        font-size: 35pt;
+    }
 
 /* End */
  body {
@@ -418,7 +409,7 @@
 
 
  #sidebar {
-     min-width: 250px;
+     min-width: 250px; 
      max-width: 250px;
      background: #7386D5;
      color: #fff;
@@ -553,9 +544,8 @@
      opacity: 1;
      margin: 5px auto;
  }
-    
-    
 }
+
 
 
 

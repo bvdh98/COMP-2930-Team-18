@@ -1,16 +1,12 @@
 <html>
 
 <head>
-    <title>Profile Page</title>
+    <title>Help Page</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./css/profile.css">
+    <link rel="stylesheet" type="text/css" href="./css/helppage.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-    <style>
-
-
-    </style>
 
 </head>
 
@@ -23,7 +19,7 @@
                 <h3 id="sidebarheader">FoodScore</h3>
             </div>
 
-            <ul class="list-unstyled components" id="sidebarlist">
+            <ul id="sidebarlist" class="list-unstyled components">
                 <li>
                     <a href="searchPage.html">Home</a>
                 </li>
@@ -51,16 +47,16 @@
                     </button>
                 </div>
             </nav>
-
+            
             <div class="text-center">
                 <img id="logo" src="./Pictures/Logo.png" class="rounded" alt="logo">
             </div>
             
-            <div id="userid">My Username</div>
-                <div id="userprofile"></div>
-            
-            <div id="useraverage">Average Score: 8</div>
-            <div id="userlist">Your List</div>
+            <div id="commontips">Common Tips:</div>
+            <div id="help1">If the app is not reading your label properly, you can always use the manual search!</div>
+            <div id="help2">All Food Scores are based on the nutritional facts and ingredients using the Canadian Health Guide!</div>
+            <div id="help3">You can find your average by clicking the "My Profile" button in the side menu!</div>
+        
         </div>
     </div>
 
@@ -76,13 +72,23 @@
         $(document).ready(function() {
             $('#sidebarCollapse').on('click', function() {
                 $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#camera').on('click', function() {
+//                $('#submit').toggleClass('active');
+//                $(this).toggleClass('active');
+                $("#submit").css("display","none");
             });
         });
 
     </script>
     
-    
-    <script src="./js/profile.js"></script>
+    <script src="./js/helppage.js"></script>
 
 </body>
 
