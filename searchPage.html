@@ -118,6 +118,10 @@
             <div class="text-center">
                 <img src="./Pictures/Logo.png" id="logo" class="rounded" alt="logo">
             </div>
+            <div class="text-center">
+                <img src="./Pictures/LogoM.png" id="logoM" class="rounded" alt="logo">
+            </div>
+           
             <!--
             <form class="form-inline">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -138,16 +142,13 @@
                             <!--end of col-->
                             <div class="col" id="trysearchBarKeyWord">
                                 <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search keywords or upload photo">
-
                             </div>
-
-
-
 
                             <!--end of col-->
                             <div class="col-auto" id="trysearch">
                                 <button class="btn btn-lg btn-success" type="submit" id="submit">Search</button>
                             </div>
+
                             <div class="col-auto" id="trycamera">
                                 <button type="button" class="btn btn-lg btn-success">
                                     <i class="fa fa-camera" id="camera"></i>
@@ -221,7 +222,6 @@
                 $(this).toggleClass('active');
             });
         });
-
     </script>
 
 
@@ -244,7 +244,6 @@
 
             });
         });
-
     </script>
     <!--    sidebar for mobile-->
     <script type="text/javascript">
@@ -273,11 +272,85 @@
 
 
         });
-
     </script>
 
+    <script src="js/client.js"></script>
+    <!--    detects support for HTML file input using a mix of feature and browser detection-->
+    <script>
+        function isUploadSupported() {
+            if (navigator.userAgent.match(/(Android (1.0|1.1|1.5|1.6|2.0|2.1))|(Windows Phone (OS 7|8.0))|(XBLWP)|(ZuneWP)|(w(eb)?OSBrowser)|(webOS)|(Kindle\/(1.0|2.0|2.5|3.0))/)) {
+                return false;
+            }
+            var elem = document.createElement('input');
+            elem.type = 'file';
+            return !elem.disabled;
+        };
+        //        Reading the File
+        if (window.File && window.FileReader && window.FormData) {
+            var $inputField = $('#file');
 
+            $inputField.on('change', function(e) {
+                var file = e.target.files[0];
 
-</body>
+                if (file) {
+                    if (/^image\//i.test(file.type)) {
+                        readFile(file);
+                    } else {
+                        alert('Not a valid image!');
+                    }
+                }
+            });
+        } else {
+            alert("File upload is not supported!");
+        }
 
-</html>
+        //        Processing the File
+        function processFile(dataURL, fileType) {
+            var maxWidth = 800;
+            var maxHeight = 800;
+
+            var image = new Image();
+            image.src = dataURL;
+
+            image.onload = function() {
+                var width = image.width;
+                var height = image.height;
+                var shouldResize = (width > maxWidth) || (height > maxHeight);
+
+                if (!shouldResize) {
+                    sendFile(dataURL);
+                    return;
+                }
+
+                var newWidth;
+                var newHeight;
+
+                if (width > height) {
+                    newHeight = height * (maxWidth / width);
+                    newWidth = maxWidth;
+                } else {
+                    newWidth = width * (maxHeight / height);
+                    newHeight = maxHeight;
+                }
+
+                var canvas = document.createElement('canvas');
+
+                canvas.width = newWidth;
+                canvas.height = newHeight;
+
+                var context = canvas.getContext('2d');
+
+                context.drawImage(this, 0, 0, newWidth, newHeight);
+
+                dataURL = canvas.toDataURL(fileType);
+
+                sendFile(dataURL);
+            };
+
+            image.onerror = function() {
+                alert('There was an error processing your file!');
+            };
+        }
+    </script>
+
+</body></html>
