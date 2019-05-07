@@ -86,7 +86,7 @@
                 </div>
             </nav>
 
-            <div class="text-center">
+            <div class="text-center" id="logoContainer">
                 <img src="./Pictures/Logo.png" id="logo" class="rounded" alt="logo">
             </div>
             <div class="text-center">
@@ -166,12 +166,43 @@
                 <!--end of col-->
 
             </div>
-
+            
+<div class="container">
+  <div class="row">
+    <div class="col-sm-5">
+      <div id="detailsBox" style="display: none">
+            <div id="score" style="display: none">Score:<span id="foodScore"></span><span id="outOfTen"> /10</span></div>
+            <div id="listChoice" style="display: none">Add to list?</div>
+            <div id="yes" style="display: none">Yes</div>
+            <div id="no" style="display: none">No</div>
+            </div>
+    </div>
+    <div class="col-sm-2">
+      
+    </div>
+    <div class="col-sm-5">
+      <div id="detailsDropdown" style="display: none">Details<span id="detailsPlus">+</span></div>
+    </div>
+  </div>
+</div>
+    
+            
+<!--
+            <div id="detailsDropdown" style="display: none">Details<span id="detailsPlus">+</span></div>
+            <div id="detailsBox" style="display: none">
+            <div id="score" style="display: none">Score:<span id="foodScore"></span><span id="outOfTen"> /10</span></div>
+            <div id="listChoice" style="display: none">Add to list?</div>
+            <div id="yes" style="display: none">Yes</div>
+            <div id="no" style="display: none">No</div>
+            </div>
+-->
+            
         </div>
    <div class="overlay"></div>
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-auth.js"></script>
     <script>
         // Your web app's Firebase configuration
@@ -206,7 +237,7 @@
     <!-- Toggling-->
     <script src="./js/searchPageSidebarD.js"></script>
 
-
+    <script src="js/searchpage.js"></script>
     <script src="./js/searchPageClick.js"></script>
     <!--    sidebar for mobile-->
     <script src="./js/searchPageSidebarM.js"></script>
