@@ -11,37 +11,9 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 
-
-    <!--    <link href="css/bootstrap.min.css" rel="stylesheet">-->
-    <!--    <link href="css/mdb.min.css" rel="stylesheet">-->
-    <!--    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">-->
-    <style>
-
-
-    </style>
-
 </head>
 
 <body>
-
-    <!--
-    <div class="container-fluid">
-
-        <div class="col-sm-3">
-
-        </div>
-        <div class="col-sm-3">
-            <img src="./Pictures/Logo.png" alt="logo" id="logo">
-        </div>
-        <div class="col-sm-3">
-
-        </div>
-    </div>
--->
-
-
-
-
     <div class="wrapper">
         <!-- Sidebar for desktop -->
         <nav id="sidebar" class="active">
@@ -96,7 +68,6 @@
         </nav>
         <!-- Page Content -->
         <div id="content">
-
             <nav>
                 <div class="container-fluid">
                     <!--button animation debug-->
@@ -108,10 +79,6 @@
                     <button type="button" id="sidebarCollapse1" class="navbar-btn ">
                         <i class="fas fa-bars" id="left"></i>
                     </button>
-
-
-
-
                 </div>
             </nav>
 
@@ -121,7 +88,7 @@
             <div class="text-center">
                 <img src="./Pictures/LogoM.png" id="logoM" class="rounded" alt="logo">
             </div>
-           
+
             <!--
             <form class="form-inline">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -135,7 +102,7 @@
                 <div class="col-12 col-md-10 col-lg-8">
 
 
-                    <form class="card card-sm ">
+                    <form class="card card-sm " id="tryjs">
 
                         <div class="card-body row no-gutters align-items-center" id="tryImg">
 
@@ -146,7 +113,7 @@
 
                             <!--end of col-->
                             <div class="col-auto" id="trysearch">
-                                <button class="btn btn-lg btn-success" type="submit" id="submit">Search</button>
+                                <button class="btn btn-lg btn-success" type="button" id="submit">Search</button>
                             </div>
 
                             <div class="col-auto" id="trycamera">
@@ -200,23 +167,23 @@
         <div class="overlay"></div>
     </div>
     <div class="overlay"></div>
-    
- <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-auth.js"></script>
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyAqKxtkDyuT3IKCrtXsEW7eWMG97DL6PFw",
-    authDomain: "comp2930-3639b.firebaseapp.com",
-    databaseURL: "https://comp2930-3639b.firebaseio.com",
-    projectId: "comp2930-3639b",
-    storageBucket: "comp2930-3639b.appspot.com",
-    messagingSenderId: "773056439844",
-    appId: "1:773056439844:web:5803d640de8e0613"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-</script>
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-auth.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAqKxtkDyuT3IKCrtXsEW7eWMG97DL6PFw",
+            authDomain: "comp2930-3639b.firebaseapp.com",
+            databaseURL: "https://comp2930-3639b.firebaseio.com",
+            projectId: "comp2930-3639b",
+            storageBucket: "comp2930-3639b.appspot.com",
+            messagingSenderId: "773056439844",
+            appId: "1:773056439844:web:5803d640de8e0613"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+    </script>
 
 
     <!--bootstrap-->
@@ -233,66 +200,15 @@
     <!-- jQuery Custom Scroller CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
     <!-- Toggling-->
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#sidebarCollapse').on('click', function() {
-                $('#sidebar').toggleClass('active');
-                $(this).toggleClass('active');
-            });
-        });
-    </script>
+    <script type="text/javascript" src="./js/searchPageSidebarD.js"></script>
 
 
-    <script type="text/javascript">
-        $(document).ready(function() {
-            //            $('#logo').on('click', function() {
-            //
-            //                $('#submit').addClass('displayNone');
-            //                $('#trysearchBarKeyWord').hide();
-            //
-            //
-            //            });
-            $('#trycamera').on('click', function() {
-
-                $('.uploadimg').show();
-                $('#trysearchBarKeyWord').hide();
-                $('#trysearch').hide();
-                $('#tryImg').addClass("forImageUpload");
-
-
-            });
-        });
-    </script>
+    <script type="text/javascript" src="./js/searchPageClick.js"></script>
     <!--    sidebar for mobile-->
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $("#sidebar1").mCustomScrollbar({
-                theme: "minimal"
-            });
-
-            $('#dismiss1, .overlay').on('click', function() {
-                $('#sidebar1').removeClass('active');
-                $('.overlay').removeClass('active');
-
-
-            });
-
-            $('#sidebarCollapse1').on('click', function() {
-                $('#sidebar1').addClass('active');
-                $('.overlay').addClass('active');
-                $('.collapse.in').toggleClass('in');
-                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-
-
-
-            });
-
-
-
-        });
-    </script>
+    <script type="text/javascript" src="./js/searchPageSidebarM.js"></script>
 
     <script src="js/client.js"></script>
+    <script src="js/searchPageJS.js"></script>
     <!--    detects support for HTML file input using a mix of feature and browser detection-->
     <script>
         function isUploadSupported() {
@@ -369,6 +285,9 @@
                 alert('There was an error processing your file!');
             };
         }
+
     </script>
 
-</body></html>
+</body>
+
+</html>
