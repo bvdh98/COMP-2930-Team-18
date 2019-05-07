@@ -1,4 +1,6 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 
 <head>
     <title>SearchPage</title>
@@ -27,6 +29,8 @@
                 </li>
                 <li>
                     <a href="profile.html">My Profile</a>
+                </li>
+                <li>
                     <a href="#">Help</a>
                 </li>
                 <li>
@@ -126,7 +130,7 @@
 
 
                             <div class="uploadimg">
-                                <!--                                <div class="js--image-preview"></div>-->
+
                                 <div class="upload-options" id="uploadContainer">
                                     <label>
                                         <input type="file" class="image-upload" accept="image/*" id="imageUpload" onchange="loadFile(event)">
@@ -166,7 +170,7 @@
         </div>
         <div class="overlay"></div>
     </div>
-    <div class="overlay"></div>
+
     <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-auth.js"></script>
     <script>
@@ -182,7 +186,6 @@
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
-
     </script>
 
 
@@ -200,12 +203,12 @@
     <!-- jQuery Custom Scroller CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
     <!-- Toggling-->
-    <script type="text/javascript" src="./js/searchPageSidebarD.js"></script>
+    <script src="./js/searchPageSidebarD.js"></script>
 
 
-    <script type="text/javascript" src="./js/searchPageClick.js"></script>
+    <script src="./js/searchPageClick.js"></script>
     <!--    sidebar for mobile-->
-    <script type="text/javascript" src="./js/searchPageSidebarM.js"></script>
+    <script src="./js/searchPageSidebarM.js"></script>
 
     <script src="js/client.js"></script>
     <script src="js/searchPageJS.js"></script>
@@ -285,9 +288,6 @@
                 alert('There was an error processing your file!');
             };
         }
-
     </script>
 
-</body>
-
-</html>
+</body></html>
