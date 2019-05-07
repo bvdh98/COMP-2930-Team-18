@@ -22,16 +22,24 @@ app.listen(8000, function(){
 //Browser sends http://localhost:3000/
 //Last '/' is the domain
 app.get('/', function(req, res){
-    let doc = fs.readFileSync('searchPage.html', "utf8");
+    let doc = fs.readFileSync('landingpage.html', "utf8");
     res.send(doc);
 });
 
-app.get('/recipe-image', function(req, res){
-    res.setHeader('Content-Type', 'text/html');
-    let recipeImage = recipes.getHTML();
-    res.send(recipeImage);
+app.get('/searchPage.html', function(req, res){
+    let doc = fs.readFileSync("searchPage.html", "utf-8");
+    res.send(doc);
 });
 
+app.get('/profile.html', function(req, res){
+    let doc = fs.readFileSync("profile.html", "utf-8");
+    res.send(doc);
+});
+
+app.get("/helppage.html", function(req, res) {
+    let doc = fs.readFileSync("helppage.html", "utf-8");
+    res.send(doc);
+});
 
 
 //Handle all recipes in list form

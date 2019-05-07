@@ -1,5 +1,8 @@
 $(document).ready(function() {
     
+
+
+
 let user = firebase.auth().currentUser;
 //write into db 
 function writeUserData(name, email) {
@@ -11,4 +14,5 @@ function writeUserData(name, email) {
     
 $("#button").on('click', writeUserData());
     
+
 });
