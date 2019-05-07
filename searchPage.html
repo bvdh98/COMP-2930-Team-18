@@ -1,4 +1,6 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 
 <head>
     <title>SearchPage</title>
@@ -27,6 +29,8 @@
                 </li>
                 <li>
                     <a href="profile.html">My Profile</a>
+                </li>
+                <li>
                     <a href="#">Help</a>
                 </li>
                 <li>
@@ -126,7 +130,7 @@
 
 
                             <div class="uploadimg">
-                                <!--                                <div class="js--image-preview"></div>-->
+
                                 <div class="upload-options" id="uploadContainer">
                                     <label>
                                         <input type="file" class="image-upload" accept="image/*" id="imageUpload" onchange="loadFile(event)">
@@ -164,27 +168,25 @@
             </div>
 
         </div>
-        <div class="overlay"></div>
+   <div class="overlay"></div>
     </div>
-    <div class="overlay"></div>
-    
-<script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-auth.js"></script>
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyAqKxtkDyuT3IKCrtXsEW7eWMG97DL6PFw",
-    authDomain: "comp2930-3639b.firebaseapp.com",
-    databaseURL: "https://comp2930-3639b.firebaseio.com",
-    projectId: "comp2930-3639b",
-    storageBucket: "comp2930-3639b.appspot.com",
-    messagingSenderId: "773056439844",
-    appId: "1:773056439844:web:5803d640de8e0613"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-</script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-auth.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAqKxtkDyuT3IKCrtXsEW7eWMG97DL6PFw",
+            authDomain: "comp2930-3639b.firebaseapp.com",
+            databaseURL: "https://comp2930-3639b.firebaseio.com",
+            projectId: "comp2930-3639b",
+            storageBucket: "comp2930-3639b.appspot.com",
+            messagingSenderId: "773056439844",
+            appId: "1:773056439844:web:5803d640de8e0613"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
 
 
 
@@ -202,12 +204,12 @@
     <!-- jQuery Custom Scroller CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
     <!-- Toggling-->
-    <script type="text/javascript" src="./js/searchPageSidebarD.js"></script>
+    <script src="./js/searchPageSidebarD.js"></script>
 
 
-    <script type="text/javascript" src="./js/searchPageClick.js"></script>
+    <script src="./js/searchPageClick.js"></script>
     <!--    sidebar for mobile-->
-    <script type="text/javascript" src="./js/searchPageSidebarM.js"></script>
+    <script src="./js/searchPageSidebarM.js"></script>
 
     <script src="js/client.js"></script>
     <script src="js/searchPageJS.js"></script>
@@ -287,7 +289,6 @@
                 alert('There was an error processing your file!');
             };
         }
-
     </script>
     
     <script>
@@ -309,6 +310,4 @@
     
     </script>
 
-</body>
-
-</html>
+</body></html>
