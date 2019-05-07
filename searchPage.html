@@ -201,7 +201,8 @@
     </div>
     <div class="overlay"></div>
     
- <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-database.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-auth.js"></script>
 <script>
   // Your web app's Firebase configuration
@@ -369,6 +370,25 @@
                 alert('There was an error processing your file!');
             };
         }
+    </script>
+    
+    <script>
+        
+        (function(){
+
+    //var firebase = app_firebase;
+    // for the current user
+    // create this user node in the datebase
+
+    firebase.auth().onAuthStateChanged(function(user){
+        firebase.database().ref("users/"+user.uid).update(
+		{
+        "name":user.displayName, 
+         "email":user.email
+        });
+    });
+})() 
+    
     </script>
 
 </body></html>
