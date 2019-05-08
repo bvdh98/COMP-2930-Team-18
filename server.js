@@ -1,6 +1,22 @@
 //Reference to fake database
 //const recipes = require('./core/data')
 
+var cors = require('cors');
+
+// Require Firebase admin for server commands
+var admin = require("firebase-admin");
+
+// Fetch the service account key JSON file contents
+var serviceAccount = require("C:/Users/spenc/Desktop/Firebase key/comp2930-3639b-6bb1ffc05441.json");
+
+// Initialize the app with a service account, granting admin privileges
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://comp2930-3639b.firebaseio.com/"
+});
+
+
+
 //Require express
 const express = require('express');
 
@@ -9,6 +25,8 @@ const bodyParser = require('body-parser');
 
 //Reference to express
 const app = express();
+app.options('*', cors()) // include before other routes 
+app.use(cors())
 
 //Require file server
 const fs = require("fs");
@@ -39,6 +57,12 @@ app.get('/profile.html', function(req, res){
 app.get("/helppage.html", function(req, res) {
     let doc = fs.readFileSync("helppage.html", "utf-8");
     res.send(doc);
+});
+
+app.get("/ajaxcall", function(req, res) {
+    admin.database().ref("Products/Cornflakes/1").on('value', function(snapshot){
+        res.send(snapshot.val());
+    });
 });
 
 
