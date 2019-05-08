@@ -12,6 +12,13 @@
     margin: 10px;
 }
 
+#prodName {
+    font-size: 32pt;
+    width: 100%;
+    text-align: center;
+    border: solid 1px;
+}
+
 #yes {
     position: absolute;
     left: 15%;
@@ -46,15 +53,17 @@
 }
 
 #listChoice {
-    position: relative;
+    position: absolute;
     text-align: center;
     font-size: 24pt;
     width: 100%;
     top: 15%;
+    border: solid 1px;
 }
 
 #score {
     position: absolute;
+    text-align: center;
     font-size: 24pt;
     width: 100%;
 }
