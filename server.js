@@ -7,7 +7,7 @@ var cors = require('cors');
 var admin = require("firebase-admin");
 
 // Fetch the service account key JSON file contents
-var serviceAccount = require("C:/Users/spenc/Desktop/Firebase key/comp2930-3639b-6bb1ffc05441.json");
+var serviceAccount = require("/Users/Roy/Desktop/Project2/comp2930-3639b-6bb1ffc05441.json");
 
 // Initialize the app with a service account, granting admin privileges
 admin.initializeApp({
