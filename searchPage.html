@@ -127,11 +127,8 @@
                             <div class="col-auto" id="trycamera">
                                 <button type="button" class="btn btn-lg btn-success" id="camerabtn">
                                     <i class="fa fa-camera" id="camera"></i>
-
                                 </button>
-
                             </div>
-
 
                             <div class="uploadimg">
 
@@ -139,27 +136,9 @@
                                     <label>
                                         <input type="file" class="image-upload" accept="image/*" id="imageUpload" onchange="loadFile(event)">
 
-
-                                        <!--
-                                        <img id="output" class="img-fluid" />
-                                        <script>
-                                            //                                            preview img
-                                            let loadFile = function(event) {
-                                                let output = document.getElementById('output');
-                                                output.src = URL.createObjectURL(event.target.files[0]);
-                                                //submit image.
-                                                output.submit();
-
-                                            };
-
-                                        </script>
--->
-
                                     </label>
                                 </div>
                             </div>
-
-
 
                             <!--end of col-->
                         </div>
@@ -226,14 +205,12 @@
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
-
     </script>
 
 
 
     <!--bootstrap-->
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
@@ -254,7 +231,7 @@
     <!--    sidebar for mobile-->
     <script src="./js/searchPageSidebarM.js"></script>
 
-    <script src="js/client.js"></script>
+<!--    <script src="js/client.js"></script>-->
     <script src="js/searchPageJS.js"></script>
     <!--    detects support for HTML file input using a mix of feature and browser detection-->
     <script>
@@ -345,8 +322,8 @@
             firebase.auth().onAuthStateChanged(function(user) {
                 firebase.database().ref("users/" + user.uid).update({
                     "name": user.displayName,
-                    "email": user.email
-                });
+                    "email": user.email,
+                }); 
             });
         })()
 

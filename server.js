@@ -61,7 +61,7 @@ app.get("/helppage.html", function(req, res) {
 
 let rowInfo = {row1: "", row2: "", row3: "", row4: "", score: ""}
 
-app.get("/cornflakes", function(req, res){
+app.post("/cornflakes", function(req, res){
     admin.database().ref("Products/Cornflakes/1").on('value', function(snapshot){
         rowInfo.row1 = snapshot.val();
     });
