@@ -1,6 +1,22 @@
 //Reference to fake database
 //const recipes = require('./core/data')
 
+var cors = require('cors');
+
+// Require Firebase admin for server commands
+var admin = require("firebase-admin");
+
+// Fetch the service account key JSON file contents
+var serviceAccount = require("C:/Users/spenc/Desktop/Firebase key/comp2930-3639b-6bb1ffc05441.json");
+
+// Initialize the app with a service account, granting admin privileges
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://comp2930-3639b.firebaseio.com/"
+});
+
+
+
 //Require express
 const express = require('express');
 
@@ -9,6 +25,8 @@ const bodyParser = require('body-parser');
 
 //Reference to express
 const app = express();
+app.options('*', cors()) // include before other routes 
+app.use(cors())
 
 //Require file server
 const fs = require("fs");
@@ -41,6 +59,45 @@ app.get("/helppage.html", function(req, res) {
     res.send(doc);
 });
 
+let rowInfo = {row1: "", row2: "", row3: "", row4: "", score: ""}
+
+app.get("/cornflakes", function(req, res){
+    admin.database().ref("Products/Cornflakes/1").on('value', function(snapshot){
+        rowInfo.row1 = snapshot.val();
+    });
+    admin.database().ref("Products/Cornflakes/2").on('value', function(snapshot){
+        rowInfo.row2 = snapshot.val();
+    });
+    admin.database().ref("Products/Cornflakes/3").on('value', function(snapshot){
+        rowInfo.row3 = snapshot.val();
+    });
+    admin.database().ref("Products/Cornflakes/4").on('value', function(snapshot){
+        rowInfo.row4 = snapshot.val();
+    });
+    admin.database().ref("Products/Cornflakes/score").on('value', function(snapshot){
+        rowInfo.score = snapshot.val();
+    });
+    res.send(rowInfo);
+});
+
+app.get("/crispyrice", function(req, res){
+    admin.database().ref("Products/Crispy Rice/1").on('value', function(snapshot){
+        rowInfo.row1 = snapshot.val();
+    });
+    admin.database().ref("Products/Crispy Rice/2").on('value', function(snapshot){
+        rowInfo.row2 = snapshot.val();
+    });
+    admin.database().ref("Products/Crispy Rice/3").on('value', function(snapshot){
+        rowInfo.row3 = snapshot.val();
+    });
+    admin.database().ref("Products/Crispy Rice/4").on('value', function(snapshot){
+        rowInfo.row4 = snapshot.val();
+    });
+    admin.database().ref("Products/Crispy Rice/score").on('value', function(snapshot){
+        rowInfo.score = snapshot.val();
+    });
+    res.send(rowInfo);
+});
 
 //Handle all recipes in list form
 app.get('/recipe-list', function(req, res){
