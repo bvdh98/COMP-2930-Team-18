@@ -23,7 +23,7 @@
 }
 
 #yes {
-    position: absolute;
+    position: relative;
     left: 15%;
     top: 65%;
     font-size: 24pt;
@@ -117,68 +117,7 @@
     font-size: 1.35em;
 }
 
-#yes {
-    position: absolute;
-    left: 15%;
-    top: 50%;
-    font-size: 24pt;
-    border: solid 1px;
-    padding: 2px;
-    width: 25%;
-    background-color: green;
-    color: white;
-    border-radius: 20px;
-}
 
-#no {
-    position: absolute;
-    right: 15%;
-    top: 50%;
-    font-size: 24pt;
-    border: solid 1px;
-    padding: 2px;
-    width: 25%;
-    background-color: red;
-    color: white;
-    border-radius: 20px;
-}
-
-#detailsBox {
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    height: 300px;
-}
-
-#listChoice {
-    position: relative;
-    text-align: center;
-    font-size: 24pt;
-    width: 100%;
-/*    top: 15%;*/
-}
-
-#score {
-    position: absolute;
-    font-size: 24pt;
-    width: 100%;
-}
-
-#detailsDropdown:hover {
-    background-color: aliceblue;
-}
-
-#detailsDropdown {
-    position: relative;
-    text-align: left;
-    font-size: 24pt;
-    border-bottom: solid 1px;
-    border-top: solid 1px;
-}
-
-#detailsPlus {
-    float: right;
-}
 
 #image {
     text-align: center;

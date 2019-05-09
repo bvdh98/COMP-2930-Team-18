@@ -7,16 +7,18 @@ firebase.auth().onAuthStateChanged(function(user) {
     console.log("spencer sucks LOL");
   }
 
-var query = firebase.database().ref("UserID/" + user.uid).orderByKey();
+var query = firebase.database().ref("users/" + user.uid + "/list").orderByKey();
 let number = 0;
+let count = 0;
     query.once("value")
         .then(function(snapshot) {
             snapshot.forEach(function(childSnapshot) {
                 var key = childSnapshot.key;
-                number += childSnapshot.val();
+                number += parseFloat(childSnapshot.val());
+                count++;
             });
-    let average = number / 4;
-    document.getElementById("calcAverage").append(average);
+    let average = number / count;
+    $("#calcAverage").html(average);
         });
     });
 });
