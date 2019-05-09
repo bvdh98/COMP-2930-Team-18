@@ -8,10 +8,14 @@ $(document).ready(function() {
     };
     
     function addToUserList() {
-        let scoreToAdd = document.getElementById("foodScore").value;
+        let product = document.getElementById("prodName").innerText;
+        let value = document.getElementById("foodScore").innerText;
+        
         firebase.auth().onAuthStateChanged(function(user) {
             if (user) {
-                firebase.database().ref("users/" + user.uid + "/list").push(document.getElementById("foodScore").innerText);
+                firebase.database().ref("users/" + user.uid + "/list").update({
+                    [product]: value
+                });
             } else {
                 console.log("spencer sucks LOL");
             }
@@ -24,6 +28,7 @@ $(document).ready(function() {
     
     $("#yes").on("click", function(){
         addToUserList();
+        reset();
     });
     
     function getDetailsData(name) {
