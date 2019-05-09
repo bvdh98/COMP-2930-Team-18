@@ -59,12 +59,45 @@ app.get("/helppage.html", function(req, res) {
     res.send(doc);
 });
 
-app.get("/ajaxcall", function(req, res) {
+let rowInfo = {row1: "", row2: "", row3: "", row4: "", score: ""}
+
+app.get("/cornflakes", function(req, res){
     admin.database().ref("Products/Cornflakes/1").on('value', function(snapshot){
-        res.send(snapshot.val());
+        rowInfo.row1 = snapshot.val();
     });
+    admin.database().ref("Products/Cornflakes/2").on('value', function(snapshot){
+        rowInfo.row2 = snapshot.val();
+    });
+    admin.database().ref("Products/Cornflakes/3").on('value', function(snapshot){
+        rowInfo.row3 = snapshot.val();
+    });
+    admin.database().ref("Products/Cornflakes/4").on('value', function(snapshot){
+        rowInfo.row4 = snapshot.val();
+    });
+    admin.database().ref("Products/Cornflakes/score").on('value', function(snapshot){
+        rowInfo.score = snapshot.val();
+    });
+    res.send(rowInfo);
 });
 
+app.get("/crispyrice", function(req, res){
+    admin.database().ref("Products/Crispy Rice/1").on('value', function(snapshot){
+        rowInfo.row1 = snapshot.val();
+    });
+    admin.database().ref("Products/Crispy Rice/2").on('value', function(snapshot){
+        rowInfo.row2 = snapshot.val();
+    });
+    admin.database().ref("Products/Crispy Rice/3").on('value', function(snapshot){
+        rowInfo.row3 = snapshot.val();
+    });
+    admin.database().ref("Products/Crispy Rice/4").on('value', function(snapshot){
+        rowInfo.row4 = snapshot.val();
+    });
+    admin.database().ref("Products/Crispy Rice/score").on('value', function(snapshot){
+        rowInfo.score = snapshot.val();
+    });
+    res.send(rowInfo);
+});
 
 //Handle all recipes in list form
 app.get('/recipe-list', function(req, res){
