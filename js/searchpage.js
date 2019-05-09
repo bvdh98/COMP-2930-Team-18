@@ -1,13 +1,11 @@
 $(document).ready(function() {
-    
         
-    $("#submit").on("click", function() {
+    $("#submit").on("click", function(e) {
+        e.preventDefault();
         $("#detailsDropdown, #score, #listChoice, #detailsBox, #yes, #no, #prodName").toggle();
-        let search = document.getElementById("textField").value;
-        $("#prodName").append(search);
-        
+        $("#prodName").append(document.getElementById("textField").value);
         $.ajax({
-            type: "GET",
+            type: "POST",
             url: "/cornflakes",
             datatype: "jsonp",
             success: function(data) {
@@ -19,7 +17,6 @@ $(document).ready(function() {
                 console.log(data);
             }
         });
-        
 //        $.ajax({
 //            type: "GET",
 //            url: "/search",
