@@ -11,6 +11,9 @@
     <link rel="stylesheet" type="text/css" href="./css/searchPageCss.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
@@ -25,7 +28,7 @@
                 <h3><span id="span1" class="animated rotateInDownLeft slow">Food</span> <span id="span2" class="animated rotateInDownRight slow">Score</span></h3>
             </div>
 
-            <ul class="list-unstyled components">
+            <ul class="list-unstyled components font">
                 <li>
                     <a href="searchPage.html">Home</a>
                 </li>
@@ -39,9 +42,12 @@
                     <a href="#">History</a>
                 </li>
                 <li>
-                    <a href="#">Contact Us</a>
+                    <a href="#">Contact Us
+                    </a>
                 </li>
             </ul>
+
+
         </nav>
         <!-- Sidebar for mobile-->
         <nav id="sidebar1">
@@ -56,7 +62,7 @@
                 <h3><span id="span1">Food</span> <span id="span2">Score</span></h3>
             </div>
 
-            <ul class="list-unstyled components">
+            <ul class="list-unstyled components font" >
                 <li>
                     <a href="searchPage.html" id="homebt">Home</a>
                 </li>
@@ -74,6 +80,8 @@
                 </li>
             </ul>
         </nav>
+
+
         <!-- Page Content -->
         <div id="content">
             <nav>
@@ -84,6 +92,10 @@
                         <span></span>
                         <span></span>
                     </button>
+                    <button class="navbar-btn " id="eggs">
+                        <i class="fab fa-angellist" id="eggs"></i>
+                    </button>
+
                     <button type="button" id="sidebarCollapse1" class="navbar-btn ">
                         <i class="fas fa-bars" id="left"></i>
                     </button>
@@ -91,7 +103,7 @@
             </nav>
 
             <div class="text-center" id="logoContainer">
-                <img src="./Pictures/Logo.png" id="logo" class="rounded" alt="logo">
+                <img src="./Pictures/Logo.png" id="logo" class="rounded animated bounceIn" alt="logo">
             </div>
             <div class="text-center">
                 <img src="./Pictures/LogoM.png" id="logoM" class="rounded animated bounceIn" alt="logo">
@@ -214,15 +226,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-    
+
     <!-- Popper.JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <!-- jQuery Custom Scroller CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-    
-    
+
+
     <!-- Toggling-->
     <script src="./js/searchPageSidebarD.js"></script>
 
@@ -233,7 +245,8 @@
 
 <!--    <script src="js/client.js"></script>-->
     <script src="js/searchPageJS.js"></script>
-    <!--    detects support for HTML file input using a mix of feature and browser detection-->
+<!--
+        detects support for HTML file input using a mix of feature and browser detection
     <script>
         function isUploadSupported() {
             if (navigator.userAgent.match(/(Android (1.0|1.1|1.5|1.6|2.0|2.1))|(Windows Phone (OS 7|8.0))|(XBLWP)|(ZuneWP)|(w(eb)?OSBrowser)|(webOS)|(Kindle\/(1.0|2.0|2.5|3.0))/)) {
@@ -309,8 +322,8 @@
                 alert('There was an error processing your file!');
             };
         }
-
     </script>
+-->
 
     <script>
         (function() {
@@ -326,9 +339,20 @@
                 }); 
             });
         })()
+    </script>
+    <script>
+        $(document).ready(function() {
 
+            $('#eggs').on('click', function() {
+
+                $('body').css("animation", "spin-left 10s linear");
+
+
+            });
+
+
+
+        });
     </script>
 
-</body>
-
-</html>
+</body></html>
