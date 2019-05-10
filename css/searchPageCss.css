@@ -250,7 +250,6 @@ a:hover {
     transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
     transform-origin: bottom left;
     height: 100vh;
-
 }
 
 #sidebar.active {
@@ -416,7 +415,7 @@ a.article:hover {
     }
     
     #detailsDropdown {
-        width: 100%;    
+        width: 100%;
     }
     
     #listChoice {
@@ -478,14 +477,14 @@ a.article:hover {
         display: block;
         width: 250px;
         position: fixed;
-        top: 0;
+        top: 0%;
         left: -250px;
         height: 100%;
         z-index: 999;
         background: whitesmoke;
         color: #fff;
         transition: all 0.3s;
-        overflow-y: scroll;
+        overflow-y: auto;
         box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
     }
 
@@ -502,6 +501,7 @@ a.article:hover {
 
     #sidebar1.active {
         left: 0;
+        position: fixed;
     }
 
     #dismiss1 {
@@ -538,6 +538,7 @@ a.article:hover {
     .overlay.active {
         display: block;
         opacity: 1;
+        position: fixed;
     }
 
     #sidebar1 .sidebar-header {
