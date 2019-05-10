@@ -53,7 +53,7 @@
 }
 
 #yes {
-    position: absolute;
+    position: relative;
     left: 15%;
     top: 65%;
     font-size: 24pt;
@@ -147,6 +147,7 @@
     font-size: 1.35em;
 }
 
+<<<<<<< HEAD
 #yes {
     position: absolute;
     left: 15%;
@@ -197,18 +198,9 @@
 #detailsDropdown:hover {
     background-color: aliceblue;
 }
+=======
+>>>>>>> d0cb2bc89a0d517a2e4cc47b4ee8f00f868d3c70
 
-#detailsDropdown {
-    position: relative;
-    text-align: left;
-    font-size: 24pt;
-    border-bottom: solid 1px;
-    border-top: solid 1px;
-}
-
-#detailsPlus {
-    float: right;
-}
 
 #image {
     text-align: center;
@@ -492,26 +484,76 @@ a.article:hover {
 
 /*Media 500*/
 @media(max-width: 500px) {
+    
+    #textField {
+        width: 100% !important;
+    }
+    
+    #searchBar {
+        position: absolute;
+        top: 30%;
+        margin: 0 auto;
+        width: 100%;
+        left: 0%;
+    }
+    
+    #dropdownHolder {
+        position: absolute;
+        top: 55% !important;
+        width: 100%;
+        left: 0%;
+        text-align: center;
+    }
+    
+    #detailsDropdown {
+        width: 100%;    
+    }
+    
+    #listChoice {
+        top: 45%;
+    }
+    
+    #detailsDropdown li {
+        font-size: 12pt;
+    }
+    
+    
+    #yes {
+        width: 100px;
+    }
+    
+    #detailsBox {
+        position: absolute;
+        left: 0%;
+        border: none;
+        top: 80px;
+        height: 250px;
+    }
+    
     #left {
         font-size: 40px;
         color: gray;
-        /*         background-color: darkgray;*/
         padding: 0.1vh;
+<<<<<<< HEAD
         margin: 0 0 0 -2vh;
 
 
+=======
+>>>>>>> d0cb2bc89a0d517a2e4cc47b4ee8f00f868d3c70
     }
 
     #submit {
-        margin: 10vh 0 0 -10vh !important;
         font-size: 20px;
-        border-radius: 10vh
+        border-radius: 10vh;
+        position: absolute;
+        left: 25%;
     }
 
     #camerabtn {
-        margin: 10vh 0 0 15vh;
         font-size: 30px;
-        border-radius: 10vh
+        border-radius: 10vh;
+        position: absolute;
+        right: 25%;
     }
 
     #placeholder {
@@ -523,13 +565,7 @@ a.article:hover {
         font-size: 40px;
 
     }
-
-    /*
-     body {
-         background-color: aqua;
-     }
-*/
-
+    
     #sidebar {
         display: none;
     }
@@ -540,14 +576,13 @@ a.article:hover {
         position: fixed;
         top: 0;
         left: -250px;
-        height: 100vh;
+        height: 100%;
         z-index: 999;
         background: whitesmoke;
         color: #fff;
         transition: all 0.3s;
         overflow-y: scroll;
         box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-        height: 100vh;
     }
 
     #sidebarCollapse {
@@ -681,12 +716,15 @@ a.article:hover {
         opacity: 0.8;
     }
 
-    #trysearch {
-        margin: 1vh 1vh 1vh 12vh !important;
-        width: 13vh;
-        display: inline;
-        opacity: 1;
 
+    #trysearch {
+        width: 100%;
+        display: block;
+        opacity: 1;
+        position: absolute;
+        left: 0% !important;
+        height: 10px;
+        top: 100%;
     }
 
     #uploadContainer {
@@ -711,15 +749,24 @@ a.article:hover {
     }
 
     #trycamera {
+        position: absolute;
+        left: 0%;
+        top: 100%;
         opacity: 1;
-        width: 13vh;
-        display: inline;
+        width: 100%;
+        display: block;
+        height: 10px;
     }
 
     #logoM {
+        position: absolute;
         display: block;
         width: 90vw;
+<<<<<<< HEAD
         z-index: -1;
+=======
+        top: 1px;
+>>>>>>> d0cb2bc89a0d517a2e4cc47b4ee8f00f868d3c70
     }
 
     #logo {
@@ -750,46 +797,3 @@ a.article:hover {
     #iambtn:hover {}
 
 }
-
-
-/* ---------------------------------------------------
-    MEDIAQUERIES
------------------------------------------------------ */
-/*
-@media (max-width: 768px) {
-    #sidebar {
-        margin-left: -250px;
-        transform: rotateY(90deg);
-    }
-
-    #sidebar.active {
-        margin-left: 0;
-        transform: none;
-    }
-
-    #sidebarCollapse span:first-of-type,
-    #sidebarCollapse span:nth-of-type(2),
-    #sidebarCollapse span:last-of-type {
-        transform: none;
-        opacity: 1;
-        margin: 5px auto;
-    }
-
-    #sidebarCollapse.active span {
-        margin: 0 auto;
-    }
-
-    #sidebarCollapse.active span:first-of-type {
-        transform: rotate(45deg) translate(2px, 2px);
-    }
-
-    #sidebarCollapse.active span:nth-of-type(2) {
-        opacity: 0;
-    }
-
-    #sidebarCollapse.active span:last-of-type {
-        transform: rotate(-45deg) translate(1px, -1px);
-    }
-
-}
-*/
