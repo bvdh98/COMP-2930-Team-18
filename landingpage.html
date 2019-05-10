@@ -13,15 +13,17 @@
 </head>
 
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 
 
-
-    <div id="image" class="animated flip"><img id="logo" src="./Pictures/Logo.png" alt="Logo"></div>
+   <div class="text-center animated flip" id="logoContainer">
+                <img src="./Pictures/Logo.png" id="logo" class="rounded animated bounceIn" alt="logo">
+            </div>
+           
     <div id="test" style="visibility:hidden;">
         <div id="firebaseui-auth-container"></div>
     </div>
     <div id="loader">Loading...</div>
-    <button id="button">Test</button>
     <script>
         setTimeout(function() {
             document.getElementById('test').style.visibility = "visible";
