@@ -1,3 +1,33 @@
+@keyframes spin-left {
+    25% {
+        -webkit-transform: rotate(-30deg);
+        -moz-transform: rotate(-30deg);
+        -ms-transform: rotate(-30deg);
+        -o-transform: rotate(-30deg);
+        transform: rotate(-30deg);
+    }
+
+    75% {
+        -webkit-transform: rotate(-330deg);
+        -moz-transform: rotate(-330deg);
+        -ms-transform: rotate(-330deg);
+        -o-transform: rotate(-330deg);
+        transform: rotate(330deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(-360deg);
+        -moz-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+        -o-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+}
+
+#eggs {
+    float: right;
+}
+
 /*
 #content {
     background-image: url("../Pictures/Simple-Background-Images-.png") !important;
@@ -155,7 +185,7 @@
     text-align: center;
     font-size: 24pt;
     width: 100%;
-/*    top: 15%;*/
+    /*    top: 15%;*/
 }
 
 #score {
@@ -203,6 +233,7 @@
 #logoContainer {
     position: relative;
     top: -5%;
+    z-index: -1;
 }
 
 #logoM {
@@ -210,7 +241,7 @@
 }
 
 #camera {
-    font-size: 28px;
+    font-size: 32px;
 }
 
 .displayNone {
@@ -306,7 +337,7 @@ a:hover {
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: #7386D5;
+    background: whitesmoke;
     color: #fff;
     transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
     transform-origin: bottom left;
@@ -320,13 +351,14 @@ a:hover {
 }
 
 #sidebar .sidebar-header {
-    padding: 20px;
-    background: #6d7fcc;
+    padding: 30px 3vw;
+    background: #eaeaea;
 }
 
 #sidebar ul.components {
     padding: 20px 0;
     border-bottom: 1px solid #47748b;
+    text-align: center;
 }
 
 #sidebar ul p {
@@ -335,8 +367,8 @@ a:hover {
 }
 
 #sidebar ul li a {
-    padding: 10px;
-    font-size: 1.1em;
+    padding: 20px 10px;
+    font-size: 1.4em;
     display: block;
 }
 
@@ -412,7 +444,6 @@ a.article:hover {
 #sidebarCollapse {
     width: 40px;
     height: 40px;
-    background: #f5f5f5;
     cursor: pointer;
 }
 
@@ -453,6 +484,12 @@ a.article:hover {
     display: none;
 }
 
+@media(max-width: 765px) {
+    #logo {
+        width: 60%;
+    }
+}
+
 /*Media 500*/
 @media(max-width: 500px) {
     #left {
@@ -460,7 +497,7 @@ a.article:hover {
         color: gray;
         /*         background-color: darkgray;*/
         padding: 0.1vh;
-
+        margin: 0 0 0 -2vh;
 
 
     }
@@ -682,6 +719,7 @@ a.article:hover {
     #logoM {
         display: block;
         width: 90vw;
+        z-index: -1;
     }
 
     #logo {
