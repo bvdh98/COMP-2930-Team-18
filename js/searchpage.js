@@ -17,7 +17,7 @@ $(document).ready(function() {
                     [product]: value
                 });
             } else {
-                console.log("spencer sucks LOL");
+                console.log("Roy is noob");
             }
         });
     };
