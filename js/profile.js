@@ -21,4 +21,9 @@ let count = 0;
     $("#calcAverage").html(average);
         });
     });
+    
+    $("#userlist").on("click", function() {
+        $("#userlist li").toggle(500);
+    });
+    
 });
