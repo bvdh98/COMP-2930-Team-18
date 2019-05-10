@@ -1,7 +1,4 @@
 $(document).ready(function() {
-    
-
-
 
 let user = firebase.auth().currentUser;
 //write into db 
