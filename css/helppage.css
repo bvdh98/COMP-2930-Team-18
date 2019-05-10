@@ -1,10 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+#font {
+    font-family: 'Lato', sans-serif;
+
+}
+
+.font {
+    font-family: 'Lato', sans-serif;
+}
+
+#span1 {
+    color: #6C6262;
+    font-weight: bolder;
+    font-size: 1.35em;
+
+}
+
+#span2 {
+    color: #146bc1;
+    margin: 0 0 0 -1vh;
+    font-size: 1.35em;
+}
+
 #image {
     text-align: center;
 }
 
 #logo {
     position: relative;
-    bottom: 75px;
+    width: 50%;
 }
 
 #submit {
@@ -34,11 +58,7 @@
 
 /* Start */
 
-#sidebarCollapse {
-    position: relative;
-    right: 30px;
-    z-index: 1;
-}
+
 
 #sidebarheader {
     font-size: 30pt;
@@ -62,7 +82,7 @@
 #help1 {
     text-align: center;
     position: relative;
-    font-size: 24pt !important;
+    font-size: 25pt;
     bottom: 75px;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -71,7 +91,7 @@
 #help2 {
     text-align: center;
     position: relative;
-    font-size: 24pt !important;
+    font-size: 25pt;
     bottom: 75px;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -80,10 +100,9 @@
 #help3 {
     text-align: center;
     position: relative;
-    font-size: 24pt !important;
+    font-size: 25pt;
     bottom: 75px;
     margin-top: 30px;
-    margin-bottom: 30px;
 }
 
 /* End */
@@ -142,30 +161,14 @@ a:focus {
 }
 
 
-#sidebar {
-    min-width: 250px !important;
-    max-width: 250px !important;
-    background: #7386D5;
-    color: #fff;
-    transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
-    transform-origin: bottom left;
-    height: 100vh;
-}
+
 
 #sidebar.active {
     margin-left: -250px;
     transform: rotateY(100deg);
 }
 
-#sidebar .sidebar-header {
-    padding: 20px;
-    background: #6d7fcc;
-}
 
-#sidebar ul.components {
-    padding: 20px 0;
-    border-bottom: 1px solid #47748b;
-}
 
 #sidebar ul p {
     color: #fff;
@@ -173,9 +176,10 @@ a:focus {
 }
 
 #sidebar ul li a {
-    padding: 10px;
-    font-size: 1.1em;
+    padding: 20px 10px;
+    font-size: 0.7em;
     display: block;
+    text-align: center;
 }
 
 #sidebar ul li a:hover {
@@ -238,17 +242,12 @@ a.article:hover {
 ----------------------------------------------------- */
 #content {
     width: 100%;
-    padding: 20px;
+    /*    padding: 20px;*/
     min-height: 100vh;
     transition: all 0.3s;
 }
 
-#sidebarCollapse {
-    width: 40px;
-    height: 40px;
-    background: #f5f5f5;
-    cursor: pointer;
-}
+
 
 #sidebarCollapse span {
     width: 80%;
@@ -304,12 +303,7 @@ a.article:hover {
 
 /* Start */
 
-#sidebarCollapse {
-    position: relative;
-    right: 30px;
-    z-index: 1;
-    width: 10px;
-}
+
 
 #sidebarheader {
     font-size: 30pt;
@@ -326,32 +320,7 @@ a.article:hover {
     margin-bottom: 20px;
 }
 
-#help1 {
-    text-align: center;
-    position: relative;
-    font-size: 42pt;
-    bottom: 75px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
 
-#help2 {
-    text-align: center;
-    position: relative;
-    font-size: 42pt;
-    bottom: 75px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-#help3 {
-    text-align: center;
-    position: relative;
-    font-size: 42pt;
-    bottom: 75px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
 
 #sidebarlist li {
     font-size: 35pt;
@@ -372,11 +341,17 @@ p {
 }
 
 a,
-a:hover,
 a:focus {
-    color: inherit;
+    color: #443b3b;
     text-decoration: none;
     transition: all 0.3s;
+}
+
+a:hover {
+    background-color: gainsboro !important;
+    transition: all 0.3s;
+    text-decoration: none;
+
 }
 
 .navbar {
@@ -416,7 +391,7 @@ a:focus {
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: #7386D5;
+    background: whitesmoke;
     color: #fff;
     transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
     transform-origin: bottom left;
@@ -429,13 +404,15 @@ a:focus {
 }
 
 #sidebar .sidebar-header {
-    padding: 20px;
-    background: #6d7fcc;
+    padding: 30px 2vw;
+    background: #eaeaea;
 }
 
 #sidebar ul.components {
     padding: 20px 0;
     border-bottom: 1px solid #47748b;
+    text-align: center;
+
 }
 
 #sidebar ul p {
@@ -443,16 +420,8 @@ a:focus {
     padding: 10px;
 }
 
-#sidebar ul li a {
-    padding: 10px;
-    font-size: 1.1em;
-    display: block;
-}
 
-#sidebar ul li a:hover {
-    color: #7386D5;
-    background: #fff;
-}
+
 
 #sidebar ul li.active > a,
 a[aria-expanded="true"] {
@@ -517,8 +486,9 @@ a.article:hover {
 #sidebarCollapse {
     width: 40px;
     height: 40px;
-    background: #f5f5f5;
+    background: white;
     cursor: pointer;
+    margin:  0 0 0 1vh;
 }
 
 #sidebarCollapse span {
@@ -550,6 +520,11 @@ a.article:hover {
     margin: 5px auto;
 }
 
+@media(max-width: 765px) {
+    #logo {
+        width: 60%;
+    }
+}
 
 /*Media 500*/
 @media(max-width: 500px) {
@@ -561,6 +536,32 @@ a.article:hover {
 
 
 
+    }
+
+    #help1 {
+        text-align: center;
+        position: relative;
+        font-size: 18pt;
+        bottom: 75px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    #help2 {
+        text-align: center;
+        position: relative;
+        font-size: 18pt;
+        bottom: 75px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    #help3 {
+        text-align: center;
+        position: relative;
+        font-size: 18pt;
+        bottom: 75px;
+        margin-top: 30px;
     }
 
     #left1 {
@@ -584,9 +585,9 @@ a.article:hover {
         position: fixed;
         top: 0;
         left: -250px;
-        height: 100vh;
+        height: 100%;
         z-index: 999;
-        background: #7386D5;
+        background: whitesmoke;
         color: #fff;
         transition: all 0.3s;
         overflow-y: scroll;
@@ -644,8 +645,8 @@ a.article:hover {
     }
 
     #sidebar1 .sidebar-header {
-        padding: 20px;
-        background: #6d7fcc;
+        padding: 20px 4vw;
+        background: #eaeaea;
     }
 
     #sidebar1 ul.components {
@@ -659,9 +660,12 @@ a.article:hover {
     }
 
     #sidebar1 ul li a {
-        padding: 10px;
-        font-size: 1.1em;
+        padding: 20px 10px;
+        font-size: 1.5em;
         display: block;
+        text-align: center;
+        font-weight: 320;
+        color: black;
     }
 
     #sidebar1 ul li a:hover {
@@ -738,6 +742,7 @@ a.article:hover {
         width: 13vh;
         display: inline;
     }
+
 
     #logoM {
         display: block;
