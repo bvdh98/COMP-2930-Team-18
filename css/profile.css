@@ -38,6 +38,12 @@
     display: none;
 }
 
+<<<<<<< HEAD
+#sidebarCollapse {
+    position: relative;
+    right: 30px;
+    z-index: 1;
+=======
 #span1 {
     color: #6C6262;
     font-weight: bolder;
@@ -49,6 +55,7 @@
     color: #146bc1;
     margin: 0 0 0 -1vh;
     font-size: 1.35em;
+>>>>>>> master
 }
 
 
@@ -65,12 +72,38 @@
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
-/* Start */
+#profileHolder {
+    position: absolute;
+    margin: 0;
+    padding: 20px;
+    height: 100%;
+    width: 50%;
+    border: solid 1px;
+    background-color: lightblue;
+}
+
+#profileContent {
+    position: relative;
+    top: 15%;
+    left: 12.5%;
+    right: 12.5%;
+    width: 75%;
+    height: 60%;
+}
+
+#userprofile, #useraverage {
+    top: 20%;
+    margin: 10px;
+}
+
 #userid {
     text-align: center;
     position: relative;
-    bottom: 75px;
-    font-size: 24pt !important;
+    font-size: 35pt;
+}
+
+#listPlus {
+    float: right;
 }
 
 #userprofile {
@@ -80,7 +113,6 @@
     width: 130px !important;
     border-radius: 50%;
     margin: 0 auto;
-    bottom: 70px;
     background-image: url(https://asphaltgold.de/media/catalog/product/cache/1/image/930x669/0f396e8a55728e79b48334e699243c07/s/t/st_ssy_stock_cap_light_pink_1.jpg);
     background-position: center;
     background-size: 150%;
@@ -89,24 +121,25 @@
 #useraverage {
     text-align: center;
     position: relative;
-    bottom: 65px;
     font-size: 24pt !important;
 }
 
 #userlist {
-    position: relative;
-    text-align: center;
-    font-size: 24pt !important;
-    border: solid black 1px;
-    width: 200px;
-    padding: 5px;
-    margin: 0 auto;
-    border-radius: 20px;
-    top: 0px !important;
+    position: absolute;
+    text-align: left;
+    font-size: 24pt;
+    width: 50%;
+    height: auto;
+    left: 50%;
+    padding: 10px;
+    border-top: solid black 1px;
+    border-bottom: solid black 1px;
+    max-height: 100%;
+    overflow-y: auto;
 }
 
-#userlist:hover {
-    background-color: lightblue;
+#userlist li {
+    display: none;
 }
 
 
@@ -337,45 +370,6 @@ a.article:hover {
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
 /* Start */
-#userid {
-    text-align: center;
-    position: relative;
-    font-size: 50pt;
-}
-
-#userprofile {
-    border: solid black 1px;
-    position: relative;
-    height: 300px;
-    width: 300px;
-    border-radius: 50%;
-    margin: 0 auto;
-    background-image: url(https://asphaltgold.de/media/catalog/product/cache/1/image/930x669/0f396e8a55728e79b48334e699243c07/s/t/st_ssy_stock_cap_light_pink_1.jpg);
-    background-position: center;
-    background-size: 150%;
-}
-
-#useraverage {
-    text-align: center;
-    position: relative;
-    font-size: 50pt;
-}
-
-#userlist {
-    position: relative;
-    text-align: center;
-    font-size: 40pt;
-    border: solid black 1px;
-    width: 300px;
-    padding: 5px;
-    margin: 0 auto;
-    border-radius: 20px;
-    top: 100px;
-}
-
-#userlist:hover {
-    background-color: lightblue;
-}
 
 
 /* End */
@@ -574,14 +568,50 @@ a.article:hover {
 
 /*Media 500*/
 @media(max-width: 500px) {
+    
+    profileContent {
+        border: solid 1px;
+        top: 0%;
+    }
+    
+    #userid {
+        position: relative;
+        top: 5%;
+        font-size: 24pt;
+    }
+    
+    #profileHolder {
+        position: relative;
+        bottom: 15%;
+        width: 100%;
+        height: 75%;
+        border: solid 1px;
+    }
+    
+    #userprofile {
+        position: relative;
+        top: 0%;
+    }
+    
+    #useraverage {
+        position: relative;
+        top: 0%;
+    }
+    
+    #userlist {
+        position: relative;
+        width: 100%;
+        left: 0%;
+        bottom: 13%;
+        font-size: 18pt;
+        margin: 0;
+        max-height: 200px;
+    }
+    
     #left {
         font-size: 40px;
         color: gray;
-        /*         background-color: darkgray;*/
         padding: 0.1vh;
-
-
-
     }
 
     #left1 {
@@ -759,9 +789,14 @@ a.article:hover {
     }
 
     #logoM {
+        position: absolute;
         display: block;
         width: 90vw;
         z-index: -1;
+<<<<<<< HEAD
+        top: 0%;
+=======
+>>>>>>> master
     }
 
     #logo {

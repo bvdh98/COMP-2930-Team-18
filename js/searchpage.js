@@ -50,74 +50,50 @@ $(document).ready(function() {
     };
     
     let dbRef = firebase.database();
-        
+    
+    $('#submit').on('click', function () {
+        if(document.getElementById("textField").value != "") {
+         $('#tryjs').hide();
+        };
+     });
+    
     $("#submit").on("click", function() {
         
+        if (document.getElementById("textField").value != "") {
         $("#detailsDropdown, #score, #listChoice, #detailsBox, #yes, #no, #prodName").toggle();
-        $("#prodName").html(document.getElementById("textField").value);
+        };
         
         let search = document.getElementById("textField").value;
         
-        if (search == "Cornflakes") {
-            getDetailsData(search);
+        if (search == "Cornflakes" || search == "cornflakes" || search == "Corn flakes" || search == "corn flakes"
+           || search == "Corn Flakes") {
+            getDetailsData("Cornflakes");
+            $("#prodName").html("Cornflakes");
         };
         
-        if (search == "Crispy Rice") {
-            getDetailsData(search);
+        if (search == "Crispy Rice" || search == "crispy rice" || search == "CrispyRice" || search == "crispyrice"
+           || search == "Crispy rice" || search == "crispy Rice") {
+            getDetailsData("Crispy Rice");
+            $("#prodName").html("Crispy Rice");
         };
         
-        if (search == "Harvest Crunch") {
-            getDetailsData(search);
+        if (search == "Harvest Crunch" || search == "harvest crunch" || search == "HarvestCrunch" || search == "harvestcrunch"
+           || search == "Harvest crunch") {
+            getDetailsData("Harvest Crunch");
+            $("#prodName").html("Harvest Crunch");
         };
         
-        if (search == "HoneyComb") {
-            getDetailsData(search);
+        if (search == "HoneyComb" || search == "honeycomb" || search == "Honey Comb" || search == "honey comb"
+           || search == "Honeycomb" || search == "Honey comb") {
+            getDetailsData("HoneyComb");
+            $("#prodName").html("HoneyComb");
         };
         
-        if (search == "Lucky Charms") {
-            getDetailsData(search);
+        if (search == "Lucky Charms" || search == "lucky charms" || search == "LuckyCharms" || search == "luckycharms"
+           || search == "Luckycharms" || search == "Lucky charms") {
+            getDetailsData("Lucky Charms");
+            $("#prodName").html("Lucky Charms");
         };
-        
-        
-//        $.ajax({
-//            type: "POST",
-//            url: "/cornflakes",
-//            datatype: "jsonp",
-//            success: function(data) {
-//                $("#row1").html(data.row1);
-//                $("#row2").html(data.row2);
-//                $("#row3").html(data.row3);
-//                $("#row4").html(data.row4);
-//                $("#foodScore").html(data.score);
-//                console.log(data);
-//            }
-//        });
-//        $.ajax({
-//            type: "GET",
-//            url: "/search",
-//            datatype: "jsonp",
-//        }).done(function(data) {
-//                $("#row1").html(data.row1);
-//                $("#row2").html(data.row2);
-//                $("#row3").html(data.row3);
-//                $("#row4").html(data.row4);
-//                $("#foodScore").html(data.score);
-//                console.log(data);
-//            });
-        
-//        if (search == "Crispy Rice"){
-//        $.ajax({
-//            type: "GET",
-//            url: "/crispyrice"
-//        }).done(function(data) {
-//                $("#row1").append(data.row1);
-//                $("#row2").append(data.row2);
-//                $("#row3").append(data.row3);
-//                $("#row4").append(data.row4);
-//                $("#foodScore").append(data.score);
-//                console.log(data);
-//            });
-//        };
         
     });
     
