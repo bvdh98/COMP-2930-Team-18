@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+#font {
+    font-family: 'Lato', sans-serif;
+
+}
+
+.font {
+    font-family: 'Lato', sans-serif;
+}
+
 @keyframes spin-left {
     25% {
         -webkit-transform: rotate(-30deg);
@@ -26,6 +37,7 @@
 
 #eggs {
     float: right;
+    background: white;
 }
 
 /*
@@ -118,16 +130,6 @@
     float: right;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Lato');
-
-#font {
-    font-family: 'Lato', sans-serif;
-
-}
-
-.font {
-    font-family: 'Lato', sans-serif;
-}
 
 #homebtn {
     text-align: center;
@@ -223,7 +225,6 @@ p {
 }
 
 a,
-
 a:focus {
     color: #443b3b;
     text-decoration: none;
@@ -287,7 +288,7 @@ a:hover {
 }
 
 #sidebar .sidebar-header {
-    padding: 30px 3vw;
+    padding: 30px 2vw;
     background: #eaeaea;
 }
 
@@ -428,19 +429,19 @@ a.article:hover {
 
 /*Media 500*/
 @media(max-width: 500px) {
-    
+
     #textField {
         width: 100% !important;
     }
-    
+
     #searchBar {
-        position: absolute;
+        /*        position: absolute;*/
         top: 30%;
         margin: 0 auto;
         width: 100%;
         left: 0%;
     }
-    
+
     #dropdownHolder {
         position: absolute;
         top: 55% !important;
@@ -448,24 +449,24 @@ a.article:hover {
         left: 0%;
         text-align: center;
     }
-    
+
     #detailsDropdown {
         width: 100%;
     }
-    
+
     #listChoice {
         top: 45%;
     }
-    
+
     #detailsDropdown li {
         font-size: 12pt;
     }
-    
-    
+
+
     #yes {
         width: 100px;
     }
-    
+
     #detailsBox {
         position: absolute;
         left: 0%;
@@ -473,13 +474,13 @@ a.article:hover {
         top: 80px;
         height: 250px;
     }
-    
+
     #left {
         font-size: 40px;
         color: gray;
         padding: 0.1vh;
     }
-  
+
     #submit {
         font-size: 20px;
         border-radius: 10vh;
@@ -503,7 +504,7 @@ a.article:hover {
         font-size: 40px;
 
     }
-    
+
     #sidebar {
         display: none;
     }
@@ -531,7 +532,7 @@ a.article:hover {
         display: block;
         opacity: 0.7;
         background-color: white;
-        z-index: 1;
+        z-index: 4;
     }
 
     #sidebar1.active {
@@ -539,6 +540,7 @@ a.article:hover {
         position: fixed;
     }
 
+/*
     #dismiss1 {
         width: 40px;
         height: 39px;
@@ -553,6 +555,7 @@ a.article:hover {
         transition: all 0.3s;
         float: right;
     }
+*/
 
     #dismiss1:hover {
         background: #fff;
@@ -700,11 +703,14 @@ a.article:hover {
     }
 
     #logoM {
-        position: absolute;
         display: block;
         width: 90vw;
         z-index: -1;
+<<<<<<< HEAD
         top: 0%;
+=======
+        margin-top: -10vh;
+>>>>>>> master
     }
 
     #logo {
