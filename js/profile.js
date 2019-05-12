@@ -21,7 +21,6 @@ let count = 0;
     let average = number / count;
     $("#calcAverage").html(average.toFixed(2));
         });
-    
     });
     
     $("#userlist").on("click", function() {
