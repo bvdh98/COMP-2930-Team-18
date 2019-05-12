@@ -42,12 +42,11 @@
     position: relative;
     right: 30px;
     z-index: 1;
-    
+
 #span1 {
     color: #6C6262;
     font-weight: bolder;
     font-size: 1.35em;
-
 }
 
 #span2 {
@@ -137,8 +136,6 @@
     display: none;
 }
 
-
-/* End */
 body {
     font-family: 'Poppins', sans-serif;
     background: white;
@@ -153,7 +150,6 @@ p {
 }
 
 a,
-
 a:focus {
     color: #443b3b;
     text-decoration: none;
@@ -332,8 +328,6 @@ a.article:hover {
     opacity: 1;
     margin: 5px auto;
 }
-
-
 
 #image {
     text-align: center;
