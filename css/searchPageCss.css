@@ -95,7 +95,6 @@
     position: absolute;
     width: 100%;
     height: 300px;
-    border: solid 1px;
 }
 
 #listChoice {
@@ -444,12 +443,12 @@ a.article:hover {
     #dropdownHolder {
         position: absolute;
         width: 100%;
-        top: 65%;
+        top: 60%;
         margin: 0;
         height: auto;
         left: 0%;
         text-align: center;
-        max-height: 200px;
+        max-height: 230px;
         overflow-y: auto;
     }
 
