@@ -1,9 +1,4 @@
  $(document).ready(function () {
-     $('#submit').on('click', function () {
-         $('#tryjs').hide();
-     })
-
-
 
      let xhr = new XMLHttpRequest();
      // Setup our listener to process completed requests

@@ -16,10 +16,12 @@ let count = 0;
                 var key = childSnapshot.key;
                 number += parseFloat(childSnapshot.val());
                 count++;
+                $("#userlist").append("<li>" + key + ": " + childSnapshot.val() + "</li>");
             });
     let average = number / count;
-    $("#calcAverage").html(average);
+    $("#calcAverage").html(average.toFixed(2));
         });
+    
     });
     
     $("#userlist").on("click", function() {
