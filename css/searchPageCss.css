@@ -435,7 +435,6 @@ a.article:hover {
     }
 
     #searchBar {
-        /*        position: absolute;*/
         top: 30%;
         margin: 0 auto;
         width: 100%;
@@ -444,13 +443,18 @@ a.article:hover {
 
     #dropdownHolder {
         position: absolute;
-        top: 55% !important;
         width: 100%;
+        top: 65%;
+        margin: 0;
+        height: auto;
         left: 0%;
         text-align: center;
+        max-height: 200px;
+        overflow-y: auto;
     }
 
     #detailsDropdown {
+        position: relative;
         width: 100%;
     }
 
@@ -462,16 +466,14 @@ a.article:hover {
         font-size: 12pt;
     }
 
-
     #yes {
         width: 100px;
     }
 
     #detailsBox {
-        position: absolute;
+        position: relative;
         left: 0%;
-        border: none;
-        top: 80px;
+        top: -46%;
         height: 250px;
     }
 
@@ -703,14 +705,11 @@ a.article:hover {
     }
 
     #logoM {
+        position: relative;
         display: block;
         width: 90vw;
         z-index: -1;
-<<<<<<< HEAD
-        top: 0%;
-=======
-        margin-top: -10vh;
->>>>>>> master
+        top: -60px;
     }
 
     #logo {
