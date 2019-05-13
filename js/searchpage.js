@@ -101,4 +101,19 @@ $(document).ready(function() {
        $("#row1, #row2, #row3, #row4").toggle(500);
     });
     
+    $(document).ready(function() {
+            $('#eggs').on('click', function() {
+                $('body').css("animation", "spin-left 10s linear");
+            });
+        });
+    
+    (function() {
+            firebase.auth().onAuthStateChanged(function(user) {
+                firebase.database().ref("users/" + user.uid).update({
+                    "name": user.displayName,
+                    "email": user.email,
+                }); 
+            });
+        })()
+    
 });
