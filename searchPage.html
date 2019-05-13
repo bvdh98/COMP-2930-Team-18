@@ -23,7 +23,6 @@
             <div class="sidebar-header">
                 <h3><span id="span1" class="animated rotateInDownLeft slow">Food</span> <span id="span2" class="animated rotateInDownRight slow">Score</span></h3>
             </div>
-
             <ul class="list-unstyled components font">
                 <li>
                     <a href="searchPage.html">Home</a>
@@ -42,16 +41,12 @@
                     </a>
                 </li>
             </ul>
-
-
         </nav>
         <!-- Sidebar for mobile-->
         <nav id="sidebar1">
-
             <div class="sidebar-header">
                 <h3><span id="span1">Food</span> <span id="span2">Score</span></h3>
             </div>
-
             <ul class="list-unstyled components font" >
                 <li>
                     <a href="searchPage.html" id="homebt">Home</a>
@@ -70,8 +65,6 @@
                 </li>
             </ul>
         </nav>
-
-
         <!-- Page Content -->
         <div id="content">
             <nav>
@@ -91,67 +84,42 @@
                     </button>
                 </div>
             </nav>
-
             <div class="text-center" id="logoContainer">
                 <img src="./Pictures/Logo.png" id="logo" class="rounded animated bounceIn" alt="logo">
             </div>
             <div class="text-center">
                 <img src="./Pictures/LogoM.png" id="logoM" class="rounded animated bounceIn" alt="logo">
             </div>
-
-            <!--
-            <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
--->
-
-
             <div class="row justify-content-center" id="searchBar">
-
                 <div class="col-12 col-md-10 col-lg-8">
-
-
                     <form class="card-sm " id="tryjs">
-
                         <div class="card-body row no-gutters align-items-center" id="tryImg">
-
                             <!--end of col-->
                             <div class="col" id="trysearchBarKeyWord">
                                 <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search keywords or upload photo" id="textField">
                             </div>
-
                             <!--end of col-->
                             <div class="col-auto" id="trysearch">
                                 <button class="btn btn-lg btn-success" type="button" id="submit">Search</button>
                             </div>
-
                             <div class="col-auto" id="trycamera">
                                 <button type="button" class="btn btn-lg btn-success" id="camerabtn">
                                     <i class="fa fa-camera" id="camera"></i>
                                 </button>
                             </div>
-
                             <div class="uploadimg">
-
                                 <div class="upload-options" id="uploadContainer">
                                     <label>
                                         <input type="file" class="image-upload" accept="image/*" id="imageUpload" onchange="loadFile(event)">
-
                                     </label>
                                 </div>
                             </div>
-
                             <!--end of col-->
                         </div>
-
                     </form>
-
                 </div>
                 <!--end of col-->
-
             </div>
-
             <div class="container">
                 <div class="row">
                     <div class="col-sm-5">
@@ -164,7 +132,6 @@
                         </div>
                     </div>
                     <div class="col-sm-2">
-
                     </div>
                     <div id="dropdownHolder" class="col-sm-5">
                         <div id="detailsDropdown" style="display: none">Details<span id="detailsPlus">+</span>
@@ -176,7 +143,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
         <div class="overlay"></div>
     </div>
@@ -185,7 +151,6 @@
     <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-auth.js"></script>
     <script>
-        // Your web app's Firebase configuration
         var firebaseConfig = {
             apiKey: "AIzaSyAqKxtkDyuT3IKCrtXsEW7eWMG97DL6PFw",
             authDomain: "comp2930-3639b.firebaseapp.com",
@@ -195,7 +160,6 @@
             messagingSenderId: "773056439844",
             appId: "1:773056439844:web:5803d640de8e0613"
         };
-        // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
     </script>
 
@@ -217,43 +181,11 @@
 
     <!-- Toggling-->
     <script src="./js/searchPageSidebarD.js"></script>
-
     <script src="js/searchpage.js"></script>
     <script src="./js/searchPageClick.js"></script>
     <!--    sidebar for mobile-->
     <script src="./js/searchPageSidebarM.js"></script>
 
-<!--    <script src="js/client.js"></script>-->
     <script src="js/searchPageJS.js"></script>
-
-    <script>
-        (function() {
-
-            //var firebase = app_firebase;
-            // for the current user
-            // create this user node in the datebase
-
-            firebase.auth().onAuthStateChanged(function(user) {
-                firebase.database().ref("users/" + user.uid).update({
-                    "name": user.displayName,
-                    "email": user.email,
-                }); 
-            });
-        })()
-    </script>
-    <script>
-        $(document).ready(function() {
-
-            $('#eggs').on('click', function() {
-
-                $('body').css("animation", "spin-left 10s linear");
-
-
-            });
-
-
-
-        });
-    </script>
 
 </body></html>
