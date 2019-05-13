@@ -8,6 +8,10 @@
 .font {
     font-family: 'Lato', sans-serif;
 }
+#output{
+    width: 300px;
+
+}
 
 @keyframes spin-left {
     25% {
