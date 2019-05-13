@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.3/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
+
 
 
 </head>
@@ -54,7 +56,7 @@
                 <h3><span id="span1">Food</span> <span id="span2">Score</span></h3>
             </div>
 
-            <ul class="list-unstyled components font" >
+            <ul class="list-unstyled components font">
                 <li>
                     <a href="searchPage.html" id="homebt">Home</a>
                 </li>
@@ -136,11 +138,17 @@
 
                             <div class="uploadimg">
 
-                                <div class="upload-options" id="uploadContainer">
+                                <div class="upload-options file-loading" id="uploadContainer">
                                     <label>
-                                        <input type="file" class="image-upload" accept="image/*" id="imageUpload" onchange="loadFile(event)">
+                                        
+                                        <input type="file" class="image-upload" accept="image/*" id="imageUpload" onchange="encodeImageFileAsURL(this)">
 
                                     </label>
+                                    <!--                                    <img id="output" />-->
+                                    <div class="col-auto" id="searchwithcamera">
+                                        
+                                    </div>
+
                                 </div>
                             </div>
 
@@ -208,6 +216,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!--    uploadimg-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.3/js/fileinput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.3/themes/fa/theme.js"></script>
 
     <!-- Popper.JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
@@ -225,7 +236,7 @@
     <!--    sidebar for mobile-->
     <script src="./js/searchPageSidebarM.js"></script>
 
-<!--    <script src="js/client.js"></script>-->
+    <!--    <script src="js/client.js"></script>-->
     <script src="js/searchPageJS.js"></script>
 
     <script>
@@ -239,7 +250,7 @@
                 firebase.database().ref("users/" + user.uid).update({
                     "name": user.displayName,
                     "email": user.email,
-                }); 
+                });
             });
         })()
     </script>
@@ -256,6 +267,28 @@
 
 
         });
+    </script>
+    <script>
+        function encodeImageFileAsURL(element) {
+            var file = element.files[0];
+            var reader = new FileReader();
+            var filename = file.name;
+
+            console.log(filename);
+
+            //            reader.onloadend = function() {
+            //                console.log('RESULT', reader)
+            //            }
+            reader.readAsDataURL(file);
+
+            //            var fu1 = document.getElementById("imageUpload").value;
+            //            console.log(fu1);
+
+            //            var output = document.getElementById('output');
+            //            output.src = URL.createObjectURL(event.target.files[0]);
+            //            console.log("123");
+
+        }
     </script>
 
 </body></html>
