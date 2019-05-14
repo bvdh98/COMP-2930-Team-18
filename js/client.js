@@ -3,8 +3,6 @@ $(document).ready(function () {
     console.log("im ready");
     //Uploading the File
     
-    
-    
     function sendFile(fileData) {
         var formData = new FormData();
 

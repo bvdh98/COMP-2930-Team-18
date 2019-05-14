@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     let name = document.getElementById("userid");
@@ -6,10 +7,18 @@ firebase.auth().onAuthStateChanged(function(user) {
   } else {
     console.log("spencer sucks LOL");
   }
-
+    
+/* Reference to firebase database. */
 var query = firebase.database().ref("users/" + user.uid + "/list").orderByKey();
+    
+/* number = sum of scores */
 let number = 0;
+    
+/* count is used to keep track of the amount of items on the list */
 let count = 0;
+
+/* This function iterates through the list of the current user and calculates the sum of the scores, and
+adds the names and scores of the products to their list on the screen so the user can see whats on their list. */
     query.once("value")
         .then(function(snapshot) {
             snapshot.forEach(function(childSnapshot) {
@@ -18,6 +27,7 @@ let count = 0;
                 count++;
                 $("#userlist").append("<li>" + key + ": " + childSnapshot.val() + "</li>");
             });
+    // calculating the average.
     let average = number / count;
     $("#calcAverage").html(average.toFixed(2));
         });

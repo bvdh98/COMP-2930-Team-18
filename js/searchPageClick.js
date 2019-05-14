@@ -7,15 +7,13 @@ $(document).ready(function () {
     //
     //            });
     $('#trycamera').on('click', function () {
-
+        $("#logo").hide();
         $('.uploadimg').show();
         $('#trysearchBarKeyWord').hide();
         $('#trysearch').hide();
         $('#tryImg').addClass("forImageUpload");
         $('#trycamera').hide();
-
-
-        $('.uploadimg').prepend("<button id='iambtn' class='btn btn-lg btn-success '> Back </button>");
+        $("#iambtn").show();
 
         $("#imageUpload").fileinput({
 
