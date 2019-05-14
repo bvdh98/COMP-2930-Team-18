@@ -787,7 +787,7 @@ a.article:hover {
     }
 
     #logo {
-        display: none;
+        display: none !important;
     }
 
 /*
