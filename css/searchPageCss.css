@@ -21,11 +21,14 @@
 }
 
 #uploadimg {
-    position: relative;
+    position: absolute;
+    width: 100%;
+    top: 25%;
     margin: 0 auto;
 }
 
 #imagePreview {
+    margin: 0 auto;
     height: 400px;
     width: 600px;
     background-image: url(http://moritzdentalcare.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png);
@@ -33,11 +36,13 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+
 #uploadContainer{
-    margin: 0 0 0 20vh;
+    margin: 0 0 0 0;
 }
-#iambtn{
-margin: 0 0 0 10vh;
+
+#iambtn {
+margin-left: 15%;
 }
 
 
@@ -461,6 +466,40 @@ a.article:hover {
 
 /*Media 500*/
 @media(max-width: 500px) {
+    
+    #uploadimg {
+        position: absolute;
+        top: -70%;
+        height: 400px;
+        left: 0%;
+        margin: 0;
+    }
+    
+    #fileUpload {
+        position: absolute;
+        left: 8%;
+        bottom: 5%;
+    }
+    
+    #iambtn {
+        margin: 0;
+        position: absolute;
+        top: 100%;
+        left: 8%;
+    }
+    
+    #imageSearchButton {
+        position: absolute;
+        bottom: 5%;
+        right: 12.5%;
+    }
+    
+    #imagePreview {
+        width: 100%;
+        position: absolute;
+        top: 5%;
+        max-height: 80%;
+    }
 
     #textField {
         width: 100% !important;
@@ -705,14 +744,17 @@ a.article:hover {
         top: 100%;
     }
 
+/*
     #uploadContainer {
         position: relative;
         overflow: hidden;
         display: inline-block;
     }
+*/
 
 
 
+/*
     #imageUpload {
         margin: 2vh;
         width: 80vw;
@@ -723,8 +765,8 @@ a.article:hover {
         border-radius: 8px;
         font-size: 15px;
         font-weight: bold;
-
     }
+*/
 
     #trycamera {
         position: absolute;
@@ -748,15 +790,16 @@ a.article:hover {
         display: none;
     }
 
+/*
     #uploadContainer {
         display: inline-block;
         margin: 8vh 0vh 0vh 0vh;
     }
+*/
+
 
     #iambtn {
-        margin: -20vh 0 0 15vh;
         border-radius: 50%;
-        padding: 20px 11px;
         font-size: 23px;
         background-color: #28a745;
         border-color: #28a745;
@@ -764,13 +807,15 @@ a.article:hover {
         height: 20vw;
         width: 20vw;
         text-align: center;
-
-
     }
 
+
     #iambtn:hover {}
+    
+/*
     #uploadContainer{
     margin: -5vh 0 0 0;
 }
+*/
 
 }
