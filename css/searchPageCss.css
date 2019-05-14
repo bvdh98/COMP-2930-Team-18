@@ -10,8 +10,11 @@
 }
 #output{
     width: 300px;
-
 }
+#uploadContainer {
+    margin: 0 0 0 20vh;
+}
+
 
 @keyframes spin-left {
     25% {
