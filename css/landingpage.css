@@ -6,6 +6,7 @@
 
 }
 
+/*
 #SVGID {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
@@ -13,17 +14,69 @@
     animation: tryme 2s cubic-bezier(0.4, 0, 1, 1) forwards;
 
 }
+*/
 
+#path1 {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    stroke-width: 5;
+    animation: tryme 2s linear forwards;
+}
+
+#path2 {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    stroke-width: 5;
+    animation: tryme 2s linear forwards .2s;
+}
+
+#epath {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    stroke-width: 5;
+    animation: tryme 2s linear forwards .2s;
+}
+
+#amask {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    stroke-width: 5;
+    animation: tryme 2s linear forwards .4s;
+}
+
+#mmask {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    stroke-width: 5;
+    animation: tryme 2s linear forwards .7s;
+}
+
+#_1mask {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    stroke-width: 5;
+    animation: tryme 2s linear forwards 1s;
+}
+#_8mask {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    stroke-width: 5;
+    animation: tryme 2s linear forwards 1.3s;
+}
+
+
+/*
 #Layer_1 {
     margin-top: -50vh;
 }
+*/
 
 #test {
 
-        margin: -23vh 0 0 0;
+    margin: -23vh 0 0 0;
 
     position: relative;
-    top: -40%;
+    top: 10%;
 
 
 
@@ -50,7 +103,7 @@
     }
 
     #test {
-        /*        margin: -20vh 0 0 0;*/
+        margin: 20vh 0 0 0;
 
     }
 
