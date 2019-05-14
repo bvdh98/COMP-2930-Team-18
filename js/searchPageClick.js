@@ -15,9 +15,6 @@ $(document).ready(function () {
         $('#trycamera').hide();
         $("#iambtn").show();
 
-
-//        $('.uploadimg').prepend("<button id='iambtn' > Back </button>");
-
         $("#imageUpload").fileinput({
 
             previewFileType: "image",
@@ -29,7 +26,8 @@ $(document).ready(function () {
             removeIcon: "<i class=\"glyphicon glyphicon-trash\"></i> ",
             uploadClass: "btn btn-info",
             uploadLabel: "Upload",
-            uploadIcon: "<i class=\"glyphicon glyphicon-upload\"></i> "
+            uploadIcon: "<i class=\"glyphicon glyphicon-upload\"></i> ",
+            
         });
 
     });
