@@ -7,6 +7,10 @@ $(document).ready(function() {
     function reset() {
         $("#detailsDropdown, #score, #listChoice, #detailsBox, #yes, #no, #prodName").toggle();
         $('#tryjs').show();
+        $("#tryImg").show();
+        $('#trysearchBarKeyWord').show();
+        $('#trysearch').show();
+        $('#trycamera').show();
     };
     
     /* This is the function that is used to add the current product that is displayed on the page to the current 
@@ -133,5 +137,70 @@ $(document).ready(function() {
                 }); 
             });
         })()
+    
+    /* This is an event listener that is listening for a change in value for the input element of type file.
+    When the event is triggered, it checks the file name and shows the correct image in the preview screen. */
+    $("#fileUpload").on("input", function() {
+        if (document.getElementById("fileUpload").value == "C:\\fakepath\\cornflakes.jpg") {
+            document.getElementById("imagePreview").style = "background-image: url(https://images-na.ssl-images-amazon.com/images/I/91d6cIN13yL._SL1500_.jpg)"
+            };
+        if (document.getElementById("fileUpload").value == "C:\\fakepath\\luckycharms.jpg") {
+            document.getElementById("imagePreview").style = "background-image: url(https://cdn.influenster.com/media/product/image/Lucky_Charms_Original_Gluten-Free_Stuff.jpg.750x750_q85ss0_progressive.jpg)"
+            };
+        if (document.getElementById("fileUpload").value == "C:\\fakepath\\crispyrice.jpg") {
+            document.getElementById("imagePreview").style = "background-image: url(https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_1b0d02a3-d5f5-42b7-acd3-ff71ab7fd3a2.JPG)"
+            };
+        if (document.getElementById("fileUpload").value == "C:\\fakepath\\honeycomb.jpg") {
+            document.getElementById("imagePreview").style = "background-image: url(https://images-na.ssl-images-amazon.com/images/I/91Kxbx7ei9L._SY550_.jpg)"
+            };
+        if (document.getElementById("fileUpload").value == "C:\\fakepath\\harvestcrunch.jpg") {
+            document.getElementById("imagePreview").style = "background-image: url(https://i5.walmartimages.ca/images/Large/969/535/6000198969535.jpg)"
+            };
+    });
+    
+    
+    /* When the search button is clicked on the image upload UI, this function will check the "fakepath" of the 
+    currently selected file and make sure it is one of our supported products. Then it uses the getDetailsData() function
+    to get the correct information from the database and dispays it on the page. */
+    
+    $("#imageSearchButton").on("click", function() {
+        
+        // File = the "fakepath" of the file currently in the input element.
+        var file = document.getElementById("fileUpload").value
+        
+        if (file != "") {
+        $("#detailsDropdown, #score, #listChoice, #detailsBox, #yes, #no, #prodName, #tryImg").toggle();
+        $("#uploadimg").hide();
+        $("#logo").show();
+        };
+        
+        if (file == "C:\\fakepath\\cornflakes.jpg") {
+            getDetailsData("Cornflakes");
+            $("#prodName").html("Cornflakes");
+        }
+        
+        if (file == "C:\\fakepath\\crispyrice.jpg") {
+            getDetailsData("Crispy Rice");
+            $("#prodName").html("Crispy Rice");
+        }
+        
+        if (file == "C:\\fakepath\\harvestcrunch.jpg") {
+            getDetailsData("Harvest Crunch");
+            $("#prodName").html("Harvest Crunch");
+        }
+        
+        if (file == "C:\\fakepath\\honeycomb.jpg") {
+            getDetailsData("HoneyComb");
+            $("#prodName").html("HoneyComb");
+        }
+        
+        if (file == "C:\\fakepath\\luckycharms.jpg") {
+            getDetailsData("Lucky Charms");
+            $("#prodName").html("Lucky Charms");
+        }
+         
+    });
+    
+    
     
 });

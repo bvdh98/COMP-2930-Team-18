@@ -117,20 +117,33 @@
                                 </button>
                             </div>
                             <div class="uploadimg" id="uploadimg">
+<button id='iambtn' style="display: none"> Back </button>
 
+  <div class="file-field">
+    <div class="z-depth-1-half mb-4">
+<!--
+      <img src="http://moritzdentalcare.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png" class="img-fluid"
+        alt="No image selected" id="imagePreview">
+-->
+        <div id="imagePreview"></div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="btn btn-mdb-color btn-rounded float-left">
+        <span>Choose file</span>
+        <input type="file" id="fileUpload">
+      </div>
+        <button type="button" id="imageSearchButton">Search</button>
+    </div>
+  </div>
+<!--
                                 <div class="upload-options file-loading" id="uploadContainer">
                                     <label>
-                                        
                                         <input type="file" class="image-upload" accept="image/*" id="imageUpload" onchange="encodeImageFileAsURL(this)">
-
-
                                     </label>
-                                    <!--                                    <img id="output" />-->
                                     <div class="col-auto" id="searchwithcamera">
-                                        
                                     </div>
-
                                 </div>
+-->
                             </div>
                             <!--end of col-->
                         </div>
@@ -229,6 +242,7 @@
             //            console.log("123");
 
         }
+        
     </script>
 
     <script src="js/searchPageJS.js"></script>
