@@ -15,7 +15,7 @@ $(document).ready(function () {
         $('#trycamera').hide();
 
 
-        $('.uploadimg').prepend("<button id='iambtn' > Back </button>");
+        $('.uploadimg').prepend("<button id='iambtn' class='btn btn-lg btn-success '> Back </button>");
 
         $("#imageUpload").fileinput({
 
@@ -28,7 +28,8 @@ $(document).ready(function () {
             removeIcon: "<i class=\"glyphicon glyphicon-trash\"></i> ",
             uploadClass: "btn btn-info",
             uploadLabel: "Upload",
-            uploadIcon: "<i class=\"glyphicon glyphicon-upload\"></i> "
+            uploadIcon: "<i class=\"glyphicon glyphicon-upload\"></i> ",
+            
         });
 
     });
