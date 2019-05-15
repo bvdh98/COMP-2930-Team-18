@@ -71,34 +71,20 @@ $(document).ready(function() {
     // database reference
     let dbRef = firebase.database();
     
-    /* This function says that if the textfield is empty then do nothing, else hide the search bar and do the search. */
-//    $('#submit').on('click', function () {
-//        if(document.getElementById("textField").value != "") {
-//         $('#tryjs').hide();
-//         $("#searchResultsImg").show();
-//         $("#logo").css("position", "absolute");
-//         $("#logo").css("right", "0%");
-//         $("#logoContainer").css("top", "-45%");
-//        };
-//     });
-    
-    
     /* This function checks the search text field for any of the possible allowed inputs, and then calls
     the getDetailsData() function with the correct name. This way our search bar allows multiple different spellings
     of each of the products in our database. Each if statement is just checking if the value of the text field is any of
     the possible spellings. */
     $("#submit").on("click", function() {
         
-//        if (document.getElementById("textField").value != "") {
-//        $("#detailsDropdown, #score, #listChoice, #detailsBox, #yes, #no, #prodName").toggle();
-//            };
         let search = document.getElementById("textField").value;
         
-        let allowedWords = ["Cornflakes", "cornflakes", "Corn flakes", " corn flakes", "Corn Flakes", "Crispy Rice", "crispy rice", "CrispyRice", "crispyrice",
+        /* This are all the words that our search will accept, anything other than one of these words and you will get a window alert telling you that the
+        product was not found. */
+        let allowedWords = ["Cornflakes", "cornflakes", "Corn flakes", "corn flakes", "Corn Flakes", "Crispy Rice", "crispy rice", "CrispyRice", "crispyrice",
                            "Crispy rice", "crispy Rice", "Harvest Crunch", "harvest crunch", "HarvestCrunch", "harvestcrunch", "Harvest crunch",
                            "HoneyComb", "honeycomb", "Honey Comb", "honey comb", "Honeycomb", "Honey comb", "Lucky Charms", "lucky charms",
                            "LuckyCharms", "luckycharms", "Luckycharms", "Lucky charms"];
-        
         let arrayChecker = 0;
         allowedWords.forEach(function(thisWord) {
            if (search == thisWord) {
@@ -170,6 +156,17 @@ $(document).ready(function() {
             });
         })()
     
+    /* This will send a verification email to the current user, if they are not already verified. */
+    firebase.auth().onAuthStateChanged(function (firebaseUser) {
+        if (user.emailVerified == null) {
+          firebaseUser.sendEmailVerification().then(function() {
+            // Email sent.
+          }, function(error) {
+            // An error happened.
+          });
+        };
+    });
+    
     /* This is an event listener that is listening for a change in value for the input element of type file.
     When the event is triggered, it checks the file name and shows the correct image in the preview screen. */
     $("#fileUpload").on("input", function() {
@@ -199,7 +196,6 @@ $(document).ready(function() {
         
         // File = the "fakepath" of the file currently in the input element.
         var file = document.getElementById("fileUpload").value
-        
         if (file != "") {
         $("#detailsDropdown, #score, #listChoice, #detailsBox, #yes, #no, #prodName, #tryImg").toggle();
         $("#uploadimg").hide();
@@ -208,27 +204,22 @@ $(document).ready(function() {
         $("#logo").css("right", "0%");
         $("#logoContainer").css("top", "-45%");
         };
-        
         if (file == "C:\\fakepath\\cornflakes.jpg") {
             getDetailsData("Cornflakes");
             $("#prodName").html("Cornflakes");
         }
-        
         if (file == "C:\\fakepath\\crispyrice.jpg") {
             getDetailsData("Crispy Rice");
             $("#prodName").html("Crispy Rice");
         }
-        
         if (file == "C:\\fakepath\\harvestcrunch.jpg") {
             getDetailsData("Harvest Crunch");
             $("#prodName").html("Harvest Crunch");
         }
-        
         if (file == "C:\\fakepath\\honeycomb.jpg") {
             getDetailsData("HoneyComb");
             $("#prodName").html("HoneyComb");
         }
-        
         if (file == "C:\\fakepath\\luckycharms.jpg") {
             getDetailsData("Lucky Charms");
             $("#prodName").html("Lucky Charms");
