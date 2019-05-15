@@ -43,6 +43,7 @@ $(document).ready(function() {
     $("#yes").on("click", function(){
         addToUserList();
         reset();
+        window.alert("Product successfully added to your list!");
     });
     
     /* This is the function used to get the information from the database. It accepts a
