@@ -20,6 +20,20 @@
     top: 1000px !important;
 }
 
+#searchResultsImg {
+    width: 50%;
+    height: 35%;
+    max-height: 450px;
+    position: relative;
+    margin-right: 25%;
+    margin-left: 4%;
+    margin-bottom: 0;
+    background-image: url(http://moritzdentalcare.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 #uploadimg {
     position: absolute;
     width: 100%;
@@ -44,7 +58,6 @@
 #iambtn {
 margin-left: 15%;
 }
-
 
 
 @keyframes spin-left {
@@ -197,7 +210,6 @@ margin-left: 15%;
 #submit {
     margin: 1vh !important;
     font-size: 25px;
-
 }
 
 
@@ -743,30 +755,6 @@ a.article:hover {
         height: 10px;
         top: 100%;
     }
-
-/*
-    #uploadContainer {
-        position: relative;
-        overflow: hidden;
-        display: inline-block;
-    }
-*/
-
-
-
-/*
-    #imageUpload {
-        margin: 2vh;
-        width: 80vw;
-        border: 2px solid black;
-        color: gray;
-        background-color: white;
-        padding: 8px 20px;
-        border-radius: 8px;
-        font-size: 15px;
-        font-weight: bold;
-    }
-*/
 
     #trycamera {
         position: absolute;
