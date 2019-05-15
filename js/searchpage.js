@@ -11,6 +11,10 @@ $(document).ready(function() {
         $('#trysearchBarKeyWord').show();
         $('#trysearch').show();
         $('#trycamera').show();
+        $("#logo").show();
+        $("#searchResultsImg").hide();
+        $("#logo").css("position", "relative");
+        $("#logoContainer").css("top", "-5%");
     };
     
     /* This is the function that is used to add the current product that is displayed on the page to the current 
@@ -39,12 +43,14 @@ $(document).ready(function() {
     $("#yes").on("click", function(){
         addToUserList();
         reset();
+        window.alert("Product successfully added to your list!");
     });
     
     /* This is the function used to get the information from the database. It accepts a
     parameter which is the name of the product in the database. It goes through all the details for the
     specified product in the database and puts the information inside the details dropdown box. */
     function getDetailsData(name) {
+        showImage(name);
         dbRef.ref("Products/" + name + "/1").on('value', function(snapshot) {
                 $("#row1").html(snapshot.val());
             });
@@ -66,24 +72,36 @@ $(document).ready(function() {
     // database reference
     let dbRef = firebase.database();
     
-    /* This function says that if the textfield is empty then do nothing, else hide the search bar and do the search. */
-    $('#submit').on('click', function () {
-        if(document.getElementById("textField").value != "") {
-         $('#tryjs').hide();
-        };
-     });
-    
-    
     /* This function checks the search text field for any of the possible allowed inputs, and then calls
     the getDetailsData() function with the correct name. This way our search bar allows multiple different spellings
     of each of the products in our database. Each if statement is just checking if the value of the text field is any of
     the possible spellings. */
     $("#submit").on("click", function() {
         
-        if (document.getElementById("textField").value != "") {
-        $("#detailsDropdown, #score, #listChoice, #detailsBox, #yes, #no, #prodName").toggle();
-            };
         let search = document.getElementById("textField").value;
+        
+        /* This are all the words that our search will accept, anything other than one of these words and you will get a window alert telling you that the
+        product was not found. */
+        let allowedWords = ["Cornflakes", "cornflakes", "Corn flakes", "corn flakes", "Corn Flakes", "Crispy Rice", "crispy rice", "CrispyRice", "crispyrice",
+                           "Crispy rice", "crispy Rice", "Harvest Crunch", "harvest crunch", "HarvestCrunch", "harvestcrunch", "Harvest crunch",
+                           "HoneyComb", "honeycomb", "Honey Comb", "honey comb", "Honeycomb", "Honey comb", "Lucky Charms", "lucky charms",
+                           "LuckyCharms", "luckycharms", "Luckycharms", "Lucky charms"];
+        let arrayChecker = 0;
+        allowedWords.forEach(function(thisWord) {
+           if (search == thisWord) {
+               arrayChecker = 1;
+               }
+        });
+        if (arrayChecker != 0) {
+            $("#detailsDropdown, #score, #listChoice, #detailsBox, #yes, #no, #prodName").toggle();
+            $('#tryjs').hide();
+            $("#searchResultsImg").show();
+            $("#logo").css("position", "absolute");
+            $("#logo").css("right", "0%");
+            $("#logoContainer").css("top", "-45%");
+        } else {
+            window.alert("Sorry, that item could not be found :(");
+        }
         
         if (search == "Cornflakes" || search == "cornflakes" || search == "Corn flakes" || search == "corn flakes"
            || search == "Corn Flakes") {
@@ -139,6 +157,17 @@ $(document).ready(function() {
             });
         })()
     
+    /* This will send a verification email to the current user, if they are not already verified. */
+    firebase.auth().onAuthStateChanged(function (firebaseUser) {
+        if (user.emailVerified == null) {
+          firebaseUser.sendEmailVerification().then(function() {
+            // Email sent.
+          }, function(error) {
+            // An error happened.
+          });
+        };
+    });
+    
     /* This is an event listener that is listening for a change in value for the input element of type file.
     When the event is triggered, it checks the file name and shows the correct image in the preview screen. */
     $("#fileUpload").on("input", function() {
@@ -176,33 +205,30 @@ resetbtn
         
         // File = the "fakepath" of the file currently in the input element.
         var file = document.getElementById("fileUpload").value
-        
         if (file != "") {
         $("#detailsDropdown, #score, #listChoice, #detailsBox, #yes, #no, #prodName, #tryImg").toggle();
         $("#uploadimg").hide();
         $("#logo").show();
+        $("#logo").css("position", "absolute");
+        $("#logo").css("right", "0%");
+        $("#logoContainer").css("top", "-45%");
         };
-        
         if (file == "C:\\fakepath\\cornflakes.jpg") {
             getDetailsData("Cornflakes");
             $("#prodName").html("Cornflakes");
         }
-        
         if (file == "C:\\fakepath\\crispyrice.jpg") {
             getDetailsData("Crispy Rice");
             $("#prodName").html("Crispy Rice");
         }
-        
         if (file == "C:\\fakepath\\harvestcrunch.jpg") {
             getDetailsData("Harvest Crunch");
             $("#prodName").html("Harvest Crunch");
         }
-        
         if (file == "C:\\fakepath\\honeycomb.jpg") {
             getDetailsData("HoneyComb");
             $("#prodName").html("HoneyComb");
         }
-        
         if (file == "C:\\fakepath\\luckycharms.jpg") {
             getDetailsData("Lucky Charms");
             $("#prodName").html("Lucky Charms");
@@ -231,7 +257,25 @@ resetbtn
         }
     };
     
-    
+    /* This is a helper function used inside of the getDetailsData() function that checks the name of the product being searched and
+    changes the background image of a div to the correct image on the search results page. */
+    function showImage(name) {
+        if (name == "Cornflakes") {
+            document.getElementById("searchResultsImg").style = "background-image: url(https://images-na.ssl-images-amazon.com/images/I/91d6cIN13yL._SL1500_.jpg)"
+        }
+        if (name == "Lucky Charms") {
+            document.getElementById("searchResultsImg").style = "background-image: url(https://cdn.influenster.com/media/product/image/Lucky_Charms_Original_Gluten-Free_Stuff.jpg.750x750_q85ss0_progressive.jpg)"
+        }
+        if (name == "Crispy Rice") {
+            document.getElementById("searchResultsImg").style = "background-image: url(https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_1b0d02a3-d5f5-42b7-acd3-ff71ab7fd3a2.JPG)"
+        }
+        if (name == "HoneyComb") {
+            document.getElementById("searchResultsImg").style = "background-image: url(https://images-na.ssl-images-amazon.com/images/I/91Kxbx7ei9L._SY550_.jpg)"
+        }
+        if (name == "Harvest Crunch") {
+            document.getElementById("searchResultsImg").style = "background-image: url(https://i5.walmartimages.ca/images/Large/969/535/6000198969535.jpg)"
+        }
+    };
     
     
     

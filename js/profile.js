@@ -33,6 +33,7 @@ adds the names and scores of the products to their list on the screen so the use
         });
     });
     
+    /* This says when the user clicks on the List drop down menu, the users list will appear. */
     $("#userlist").on("click", function() {
         $("#userlist li").toggle(500);
     });
