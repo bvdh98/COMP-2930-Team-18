@@ -59,6 +59,7 @@ $(document).ready(function() {
             });
             dbRef.ref("Products/" + name + "/score").on('value', function(snapshot) {
                 $("#foodScore").html(snapshot.val());
+                changeColor(snapshot.val());
             });
     };
     
@@ -200,6 +201,29 @@ $(document).ready(function() {
         }
          
     });
+    
+    /* When the camera button is clicked it will set the image preview back to the placeholder image and it also sets
+    the file input field to an empty string so that the previously selected image does not stay there. */
+    $("#camerabtn").on("click", function() {
+        document.getElementById("imagePreview").style = "background-image: url(http://moritzdentalcare.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png)";
+        document.getElementById("fileUpload").value = ""; 
+    });
+    
+    /* This function will make the score show up in either red, orange, or green. These colors represent
+    Unhealthy, average, and healthy. The goal was to make it even easier to see how healthy your food is. */
+    function changeColor(score) {
+        if (score == 5 || score == 6) {
+            $("#score").css("color", "red");
+        }
+        if (score == 7) {
+            $("#score").css("color", "orange");
+        }
+        if (score == 9 || score == 10 || score == 8) {
+            $("#score").css("color", "green");
+        }
+    };
+    
+    
     
     
     
