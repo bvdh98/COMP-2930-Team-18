@@ -72,15 +72,15 @@ $(document).ready(function() {
     let dbRef = firebase.database();
     
     /* This function says that if the textfield is empty then do nothing, else hide the search bar and do the search. */
-    $('#submit').on('click', function () {
-        if(document.getElementById("textField").value != "") {
-         $('#tryjs').hide();
-         $("#searchResultsImg").show();
-         $("#logo").css("position", "absolute");
-         $("#logo").css("right", "0%");
-         $("#logoContainer").css("top", "-45%");
-        };
-     });
+//    $('#submit').on('click', function () {
+//        if(document.getElementById("textField").value != "") {
+//         $('#tryjs').hide();
+//         $("#searchResultsImg").show();
+//         $("#logo").css("position", "absolute");
+//         $("#logo").css("right", "0%");
+//         $("#logoContainer").css("top", "-45%");
+//        };
+//     });
     
     
     /* This function checks the search text field for any of the possible allowed inputs, and then calls
@@ -89,10 +89,32 @@ $(document).ready(function() {
     the possible spellings. */
     $("#submit").on("click", function() {
         
-        if (document.getElementById("textField").value != "") {
-        $("#detailsDropdown, #score, #listChoice, #detailsBox, #yes, #no, #prodName").toggle();
-            };
+//        if (document.getElementById("textField").value != "") {
+//        $("#detailsDropdown, #score, #listChoice, #detailsBox, #yes, #no, #prodName").toggle();
+//            };
         let search = document.getElementById("textField").value;
+        
+        let allowedWords = ["Cornflakes", "cornflakes", "Corn flakes", " corn flakes", "Corn Flakes", "Crispy Rice", "crispy rice", "CrispyRice", "crispyrice",
+                           "Crispy rice", "crispy Rice", "Harvest Crunch", "harvest crunch", "HarvestCrunch", "harvestcrunch", "Harvest crunch",
+                           "HoneyComb", "honeycomb", "Honey Comb", "honey comb", "Honeycomb", "Honey comb", "Lucky Charms", "lucky charms",
+                           "LuckyCharms", "luckycharms", "Luckycharms", "Lucky charms"];
+        
+        let arrayChecker = 0;
+        allowedWords.forEach(function(thisWord) {
+           if (search == thisWord) {
+               arrayChecker = 1;
+               }
+        });
+        if (arrayChecker != 0) {
+            $("#detailsDropdown, #score, #listChoice, #detailsBox, #yes, #no, #prodName").toggle();
+            $('#tryjs').hide();
+            $("#searchResultsImg").show();
+            $("#logo").css("position", "absolute");
+            $("#logo").css("right", "0%");
+            $("#logoContainer").css("top", "-45%");
+        } else {
+            window.alert("Sorry, that item could not be found :(");
+        }
         
         if (search == "Cornflakes" || search == "cornflakes" || search == "Corn flakes" || search == "corn flakes"
            || search == "Corn Flakes") {
