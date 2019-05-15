@@ -8,11 +8,15 @@
 .font {
     font-family: 'Lato', sans-serif;
 }
-#output{
+
+#output {
     width: 300px;
 }
+.file-preview{
+    padding: 41px !important;
+}
 #uploadContainer {
-    margin: 0 0 0 20vh;
+    margin: 0 0 0 0vh;
 }
 
 .md-form {
@@ -28,21 +32,24 @@
 }
 
 #imagePreview {
-    margin: 0 auto;
-    height: 400px;
-    width: 600px;
-    background-image: url(http://moritzdentalcare.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png);
+/*    margin: 0 auto;*/
+    height: 50vh;
+/*    width: 100vw;*/
+    /*    background-image: url(http://moritzdentalcare.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png);*/
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-#uploadContainer{
-    margin: 0 0 0 0;
-}
 
 #iambtn {
-margin-left: 15%;
+    /*    margin-left: 15%;*/
+}
+
+#imageSearchButton,
+#resetbtn,
+#iambtn {
+    margin-left: 1px;
 }
 
 
@@ -113,6 +120,16 @@ margin-left: 15%;
     background-color: green;
     color: white;
     border-radius: 20px;
+}
+
+#yes:hover {
+    opacity: 0.5;
+    background-color: darkblue;
+}
+
+#no:hover {
+    opacity: 0.5;
+    background-color: darkblue;
 }
 
 #no {
@@ -466,7 +483,7 @@ a.article:hover {
 
 /*Media 500*/
 @media(max-width: 500px) {
-    
+
     #uploadimg {
         position: absolute;
         top: -70%;
@@ -474,31 +491,27 @@ a.article:hover {
         left: 0%;
         margin: 0;
     }
-    
+
     #fileUpload {
         position: absolute;
         left: 8%;
         bottom: 5%;
     }
-    
-    #iambtn {
-        margin: 0;
-        position: absolute;
-        top: 100%;
-        left: 8%;
-    }
-    
-    #imageSearchButton {
-        position: absolute;
-        bottom: 5%;
-        right: 12.5%;
-    }
-    
+
+
+
+
+
     #imagePreview {
+
         width: 100%;
-        position: absolute;
+        /*        position: absolute;*/
         top: 5%;
         max-height: 80%;
+    }
+
+    .file-preview {
+        margin-top: 10vh;
     }
 
     #textField {
@@ -613,7 +626,7 @@ a.article:hover {
         position: fixed;
     }
 
-/*
+    /*
     #dismiss1 {
         width: 40px;
         height: 39px;
@@ -744,7 +757,7 @@ a.article:hover {
         top: 100%;
     }
 
-/*
+    /*
     #uploadContainer {
         position: relative;
         overflow: hidden;
@@ -754,7 +767,7 @@ a.article:hover {
 
 
 
-/*
+    /*
     #imageUpload {
         margin: 2vh;
         width: 80vw;
@@ -790,7 +803,7 @@ a.article:hover {
         display: none !important;
     }
 
-/*
+    /*
     #uploadContainer {
         display: inline-block;
         margin: 8vh 0vh 0vh 0vh;
@@ -799,6 +812,7 @@ a.article:hover {
 
 
     #iambtn {
+        /*
         border-radius: 50%;
         font-size: 23px;
         background-color: #28a745;
@@ -807,15 +821,153 @@ a.article:hover {
         height: 20vw;
         width: 20vw;
         text-align: center;
+*/
+        /*        margin: 0 20vh 0 -5vh;*/
+        margin: 0vh -2vh -6vh 0vh;
+        /*        transform: translateX(-40vh);*/
+        position: absolute;
+        bottom: 5%;
+        left: 33%;
     }
 
 
     #iambtn:hover {}
-    
-/*
-    #uploadContainer{
-    margin: -5vh 0 0 0;
-}
+
+    #imagePreview {
+/*        margin: 0 auto;*/
+        /*
+    height: 400px;
+    width: 600px;
 */
+        /*    background-image: url(http://moritzdentalcare.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png);*/
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #one {
+
+        /*        margin: 2vh;*/
+    }
+
+    #imageSearchButton {
+        margin: 0vh -2vh -6vh 0vh;
+        /*        transform: translateX(-40vh);*/
+        position: absolute;
+        bottom: 5%;
+        /*        right: 12.5%;*/
+        left: 0%;
+
+
+
+    }
+
+    #resetbtn {
+        margin: 0vh -2vh -6vh 0vh;
+        /*        transform: translateX(-40vh);*/
+        position: absolute;
+        bottom: 5%;
+        left: 17%;
+    }
+    
+
+}
+
+@media(max-width: 420px) {
+
+
+
+    #imageSearchButton {
+        margin: 0vh -2vh -6vh 0vh;
+        /*        transform: translateX(-40vh);*/
+        position: absolute;
+        bottom: 5%;
+        /*        right: 12.5%;*/
+        left: 0%;
+
+
+
+    }
+
+    #resetbtn {
+        margin: 0vh -2vh -6vh 0vh;
+        /*        transform: translateX(-40vh);*/
+        position: absolute;
+        bottom: 5%;
+        left: 21%;
+    }
+
+    #iambtn {
+        /*
+        border-radius: 50%;
+        font-size: 23px;
+        background-color: #28a745;
+        border-color: #28a745;
+        color: white;
+        height: 20vw;
+        width: 20vw;
+        text-align: center;
+*/
+        /*        margin: 0 20vh 0 -5vh;*/
+        margin: 0vh -2vh -6vh 0vh;
+        /*        transform: translateX(-40vh);*/
+        position: absolute;
+        bottom: 5%;
+        left: 41%;
+    }
+     #camerabtn {
+        font-size: 30px;
+        border-radius: 10vh;
+        position: absolute;
+        right: 20%;
+    }
+
+}
+
+@media(max-width: 350px) {
+    #imageSearchButton {
+        margin: 0vh -2vh -6vh 0vh;
+        /*        transform: translateX(-40vh);*/
+        position: absolute;
+        bottom: 5%;
+        /*        right: 12.5%;*/
+        left: 0%;
+
+
+
+    }
+
+    #resetbtn {
+        margin: 0vh -2vh -6vh 0vh;
+        /*        transform: translateX(-40vh);*/
+        position: absolute;
+        bottom: 5%;
+        left: 25%;
+    }
+
+    #iambtn {
+        /*
+        border-radius: 50%;
+        font-size: 23px;
+        background-color: #28a745;
+        border-color: #28a745;
+        color: white;
+        height: 20vw;
+        width: 20vw;
+        text-align: center;
+*/
+        /*        margin: 0 20vh 0 -5vh;*/
+        margin: 0vh -2vh -6vh 0vh;
+        /*        transform: translateX(-40vh);*/
+        position: absolute;
+        bottom: 5%;
+        left: 49%;
+    }
+    #camerabtn {
+        font-size: 30px;
+        border-radius: 10vh;
+        position: absolute;
+        right: 15%;
+    }
 
 }
