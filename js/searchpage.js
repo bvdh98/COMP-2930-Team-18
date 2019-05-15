@@ -192,6 +192,14 @@ $(document).ready(function() {
     /* When the search button is clicked on the image upload UI, this function will check the "fakepath" of the 
     currently selected file and make sure it is one of our supported products. Then it uses the getDetailsData() function
     to get the correct information from the database and dispays it on the page. */
+     $("button[title='Upload selected files']").on("click",function(){
+         console.log("13323");
+     });
+resetbtn
+    $("#resetbtn").on("click",function(){
+        $("#imagePreview").css("background-image","none");
+     });
+    
     
     $("#imageSearchButton").on("click", function() {
         
@@ -231,7 +239,7 @@ $(document).ready(function() {
     /* When the camera button is clicked it will set the image preview back to the placeholder image and it also sets
     the file input field to an empty string so that the previously selected image does not stay there. */
     $("#camerabtn").on("click", function() {
-        document.getElementById("imagePreview").style = "background-image: url(http://moritzdentalcare.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png)";
+//        document.getElementById("imagePreview").style = "background-image: url(http://moritzdentalcare.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png)";
         document.getElementById("fileUpload").value = ""; 
     });
     

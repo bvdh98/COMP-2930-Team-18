@@ -112,22 +112,67 @@
                                     <i class="fa fa-camera" id="camera"></i>
                                 </button>
                             </div>
-                    <div class="uploadimg" id="uploadimg">
-<button id='iambtn' style="display: none">Back</button>
+                            <div class="uploadimg" id="uploadimg">
 
-  <div class="file-field">
-    <div class="z-depth-1-half mb-4">
-        <div id="imagePreview"></div>
-    </div>
-    <div class="d-flex justify-content-center">
-      <div class="btn btn-mdb-color btn-rounded float-left">
-        <span></span>
-        <input type="file" id="fileUpload">
-      </div>
-        <button type="button" id="imageSearchButton">Search</button>
-    </div>
-  </div>
-                     </div>
+                                <div class="upload-options file-field col-auto" id="uploadContainer">
+                                    <!--                                   img preview-->
+                                    <div class="mb-4 file-preview ">
+                                        <!--                                        <div id="imagePreview"></div>-->
+                                        <div class="file-upload-wrapper file-drop-zone col-auto" id="imagePreview">
+
+                                            
+
+                                            <!--                                            <div class="file-drop-zone-title">Drag &amp; drop files here …</div>-->
+                                            <!--
+                                            <div class="file-preview-thumbnails">
+                                            </div>
+-->
+                                            <div class="clearfix"></div>
+                                            <div class="file-preview-status text-center text-success"></div>
+                                            <div class="kv-fileinput-error file-error-message" style="display: none;"></div>
+                                        </div>
+                                    </div>
+
+
+                                    <div>
+                                        <div class="input-group file-caption-main">
+                                            <div class="file-caption form-control  kv-fileinput-caption" tabindex="500">
+
+
+
+                                                <input class="file-caption-name" onkeydown="return false;" onpaste="return false;" placeholder="Select file...">
+                                                <!--
+                                                <button type="button" class="btn btn-info fileinput-upload fileinput-upload-button " id="imageSearchButton">Search</button>
+                                                
+                                                
+                                                
+                                                <button type="reset" value="reset" id="resetbtn" tabindex="500" class="btn btn-danger fileinput-remove fileinput-remove-button"><i class="glyphicon glyphicon-trash"></i> <span class="hidden-xs">Delete</span></button>
+-->
+                                            </div>
+                                            <!--                                       <input class="file-caption-name" onkeydown="return false;" onpaste="return false;" placeholder="Select file...">-->
+                                            <div class="btn btn-success btn-file col-auto" id="one">
+
+
+                                                <input class="image-upload" type="file" id="fileUpload" accept="image/*"  
+                                                onchange="encodeImageFileAsURL(this)">
+                                                Pick Image
+                                            </div>
+                                            
+                                            <button type="button" tabindex="500" class="btn btn-info fileinput-upload fileinput-upload-button col-auto" id="imageSearchButton">Search</button>
+                                            
+                                            
+                                            <button type="reset" value="reset" id="resetbtn" tabindex="500" class="btn btn-danger col-auto fileinput-remove fileinput-remove-button"><i class="glyphicon glyphicon-trash"></i> <span class="hidden-xs">Delete</span></button>
+                                            <button class="btn btn-secondary col-auto" id='iambtn'>Back</button>
+
+                                        </div>
+
+
+                                       
+
+
+                                    </div>
+                                </div>
+                            </div>
                             <!--end of col-->
                         </div>
                     </form>
@@ -175,7 +220,6 @@
             appId: "1:773056439844:web:5803d640de8e0613"
         };
         firebase.initializeApp(firebaseConfig);
-
     </script>
 
 
@@ -231,6 +275,4 @@
 -->
 
 
-</body>
-
-</html>
+</body></html>
