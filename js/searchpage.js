@@ -11,6 +11,10 @@ $(document).ready(function() {
         $('#trysearchBarKeyWord').show();
         $('#trysearch').show();
         $('#trycamera').show();
+        $("#logo").show();
+        $("#searchResultsImg").hide();
+        $("#logo").css("position", "relative");
+        $("#logoContainer").css("top", "-5%");
     };
     
     /* This is the function that is used to add the current product that is displayed on the page to the current 
@@ -45,6 +49,7 @@ $(document).ready(function() {
     parameter which is the name of the product in the database. It goes through all the details for the
     specified product in the database and puts the information inside the details dropdown box. */
     function getDetailsData(name) {
+        showImage(name);
         dbRef.ref("Products/" + name + "/1").on('value', function(snapshot) {
                 $("#row1").html(snapshot.val());
             });
@@ -70,6 +75,10 @@ $(document).ready(function() {
     $('#submit').on('click', function () {
         if(document.getElementById("textField").value != "") {
          $('#tryjs').hide();
+         $("#searchResultsImg").show();
+         $("#logo").css("position", "absolute");
+         $("#logo").css("right", "0%");
+         $("#logoContainer").css("top", "-45%");
         };
      });
     
@@ -173,6 +182,9 @@ $(document).ready(function() {
         $("#detailsDropdown, #score, #listChoice, #detailsBox, #yes, #no, #prodName, #tryImg").toggle();
         $("#uploadimg").hide();
         $("#logo").show();
+        $("#logo").css("position", "absolute");
+        $("#logo").css("right", "0%");
+        $("#logoContainer").css("top", "-45%");
         };
         
         if (file == "C:\\fakepath\\cornflakes.jpg") {
@@ -223,7 +235,25 @@ $(document).ready(function() {
         }
     };
     
-    
+    /* This is a helper function used inside of the getDetailsData() function that checks the name of the product being searched and
+    changes the background image of a div to the correct image on the search results page. */
+    function showImage(name) {
+        if (name == "Cornflakes") {
+            document.getElementById("searchResultsImg").style = "background-image: url(https://images-na.ssl-images-amazon.com/images/I/91d6cIN13yL._SL1500_.jpg)"
+        }
+        if (name == "Lucky Charms") {
+            document.getElementById("searchResultsImg").style = "background-image: url(https://cdn.influenster.com/media/product/image/Lucky_Charms_Original_Gluten-Free_Stuff.jpg.750x750_q85ss0_progressive.jpg)"
+        }
+        if (name == "Crispy Rice") {
+            document.getElementById("searchResultsImg").style = "background-image: url(https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_1b0d02a3-d5f5-42b7-acd3-ff71ab7fd3a2.JPG)"
+        }
+        if (name == "HoneyComb") {
+            document.getElementById("searchResultsImg").style = "background-image: url(https://images-na.ssl-images-amazon.com/images/I/91Kxbx7ei9L._SY550_.jpg)"
+        }
+        if (name == "Harvest Crunch") {
+            document.getElementById("searchResultsImg").style = "background-image: url(https://i5.walmartimages.ca/images/Large/969/535/6000198969535.jpg)"
+        }
+    };
     
     
     
