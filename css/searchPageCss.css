@@ -33,7 +33,7 @@
 
 #imagePreview {
 /*    margin: 0 auto;*/
-    height: 50vh;
+    height: 40vh;
 /*    width: 100vw;*/
     /*    background-image: url(http://moritzdentalcare.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png);*/
     background-size: contain;
@@ -827,7 +827,7 @@ a.article:hover {
         /*        transform: translateX(-40vh);*/
         position: absolute;
         bottom: 5%;
-        left: 33%;
+        left: 40%;
     }
 
 
@@ -856,7 +856,7 @@ a.article:hover {
         position: absolute;
         bottom: 5%;
         /*        right: 12.5%;*/
-        left: 0%;
+        left: 4%;
 
 
 
@@ -867,7 +867,7 @@ a.article:hover {
         /*        transform: translateX(-40vh);*/
         position: absolute;
         bottom: 5%;
-        left: 17%;
+        left: 22.5%;
     }
     
 
