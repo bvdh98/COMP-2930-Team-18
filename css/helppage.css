@@ -114,26 +114,7 @@
     margin-bottom: 30px;
     color: #444444
 }
-/*
-#help2 {
-    text-align: center;
-    position: relative;
-    font-size: 25pt;
-    bottom: 75px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
 
-#help3 {
-    text-align: center;
-    position: relative;
-    font-size: 25pt;
-    bottom: 75px;
-    margin-top: 30px;
-}
-*/
-
-/* End */
 body {
     font-family: 'Poppins', sans-serif;
     background: white;
@@ -187,9 +168,6 @@ a:focus {
     align-items: stretch;
     perspective: 1500px;
 }
-
-
-
 
 #sidebar.active {
     margin-left: -250px;
@@ -263,8 +241,6 @@ a.article:hover {
     color: #fff !important;
 }
 
-
-
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
@@ -273,8 +249,6 @@ a.article:hover {
     height: 100vh;
     transition: all 0.3s;
 }
-
-
 
 #sidebarCollapse span {
     width: 80%;
@@ -298,13 +272,11 @@ a.article:hover {
     transform: rotate(-45deg) translate(1px, -1px);
 }
 
-
 #sidebarCollapse.active span {
     transform: none;
     opacity: 1;
     margin: 5px auto;
 }
-
 
 #image {
     text-align: center;
@@ -323,14 +295,7 @@ a.article:hover {
     font-size: 32px;
 }
 
-
-
-
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-
-/* Start */
-
-
 
 #sidebarheader {
     font-size: 30pt;
@@ -348,27 +313,23 @@ a.article:hover {
     margin-bottom: 20px;
 }
 
-
-
 #sidebarlist li {
     font-size: 35pt;
 }
 
-/* End */
+
 body {
     font-family: 'Poppins', sans-serif;
-/*    background: white;*/
-     background-image: url(../bg.png);
+/*     background-image: url(../bg.png);*/
     background-size: 100% 100%;
-    
 }
 
 body:before{
     content: "";
     height: 100%;
-   
     position: fixed
 }
+
 p {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
