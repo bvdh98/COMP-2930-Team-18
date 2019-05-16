@@ -228,11 +228,7 @@ a:hover {
     padding: 10px;
 }
 
-#sidebar ul li a {
-    padding: 20px 10px;
-    font-size: 1.4em;
-    display: block;
-}
+
 
 #sidebar ul li a:hover {
     color: #7386D5;
