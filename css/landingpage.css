@@ -1,8 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.font {
+    font-family: 'Roboto', sans-serif;
+
+}
+
 @keyframes tryme {
     100% {
         stroke-dashoffset: 0;
     }
 
+
+}
+
+#signinpic {
+    width: 64px;
+    height: auto;
+}
+
+#bg {
+    background-image: url("../Pictures/landingbg2.jpg");
+    height: 60vh;
+    width: auto;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+
+
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+
+}
+
+h3 {
+    text-align: center;
+    position: relative;
+    padding: 23px 0 23px;
+}
+
+h3::after {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #ff3a6d;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.signin {
+    text-align: center;
+    border: 1px solid #e5e7ef;
+    padding: 30px;
+    margin: 0 0 30px 5vh;
+
+
+}
+
+.signin:hover {
+    background: #ff3a6d;
+    color: white;
+    transition: 0.3s;
 
 }
 
@@ -20,49 +91,49 @@
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     stroke-width: 5;
-    animation: tryme 2s linear forwards;
+    animation: tryme 4s linear forwards 0.3s;
 }
 
 #path2 {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     stroke-width: 5;
-    animation: tryme 2s linear forwards .2s;
+    animation: tryme 4s linear forwards 0.5s;
 }
 
 #epath {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     stroke-width: 5;
-    animation: tryme 2s linear forwards .2s;
+    animation: tryme 4s linear forwards 0.2s;
 }
 
 #amask {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     stroke-width: 5;
-    animation: tryme 2s linear forwards .4s;
+    animation: tryme 4s linear forwards 0.4s;
 }
 
 #mmask {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     stroke-width: 5;
-    animation: tryme 2s linear forwards .7s;
+    animation: tryme 4s linear forwards 0.7s;
 }
 
 #_1mask {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     stroke-width: 5;
-    animation: tryme 2s linear forwards 1s;
+    animation: tryme 4s linear forwards 1s;
 }
 
 #_8mask {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     stroke-width: 5;
-    animation: tryme 2s linear forwards 1.3s;
+    animation: tryme 4s linear forwards 1.3s;
 }
 
 
@@ -74,30 +145,54 @@
 
 #test {
 
-    margin: -23vh 0 0 0;
+    margin: 0 0 0 0;
+    background-color: #f3f4f7;
+    height: 60vh;
+    padding: 3vh 5vh;
+    visibility: hidden;
 
-    position: relative;
-    top: 10%;
 
 
 
 }
 
+#headt {
+    text-align: center;
+    color: white;
+    padding: 5vh;
+    font-size: 5em;
+    visibility: hidden;
+
+}
+
+#firebaseui-auth-container {
+    margin-top: 2vh;
+    text-align: center;
+}
+
+#optionC {
+    margin: 5vh;
+}
 
 #image {
     text-align: center;
 }
 
-#logo {
-    width: 58%;
-    height: auto;
+#footer {
+    background-color: #252a33;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+
 }
+
+
 
 
 @media (max-width: 500px) {
 
     #Layer_1 {
-    margin: -10vh 0 0 0;
+        margin: -10vh 0 0 0;
 
     }
 
@@ -111,11 +206,11 @@
     }
 
     #test {
-        margin: -15vh 0 0 0;
+        margin: 0 0 0 0;
 
     }
 
-    
+
 
 
 }
