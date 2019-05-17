@@ -529,7 +529,28 @@ a.article:hover {
 
 /*Media 500*/
 @media(max-width: 500px) {
+    
+    #testtest {
+    height: 100px;
+    }
 
+    #score {
+        left: 0;
+        top: 0;
+    }
+    
+    #listChoice {
+        left: 0;
+        top: 0;
+        right: 0;
+    }
+    
+    #prodName {
+        position: relative;
+        left: 0;
+        top: 0%;
+    }
+    
     #uploadimg {
         position: absolute;
         top: -70%;
@@ -566,31 +587,19 @@ a.article:hover {
     }
 
     #searchBar {
-        top: 30%;
+        position: relative;
+        top: 20%;
         margin: 0 auto;
         width: 100%;
         left: 0%;
     }
 
-    #dropdownHolder {
+    #detailsDropdown {
         position: absolute;
         width: 100%;
-        top: 60%;
-        margin: 0;
-        height: auto;
-        left: 0%;
-        text-align: center;
-        max-height: 230px;
-        overflow-y: auto;
-    }
-
-    #detailsDropdown {
-        position: relative;
-        width: 100%;
-    }
-
-    #listChoice {
-        top: 45%;
+        left: 0;
+        top: 110%;
+        max-height: 270px;
     }
 
     #detailsDropdown li {
@@ -813,22 +822,6 @@ a.article:hover {
     .file-preview{
         padding-right: 62px!important;
     }
-
-
-    /*
-    #imageUpload {
-        margin: 2vh;
-        width: 80vw;
-        border: 2px solid black;
-        color: gray;
-        background-color: white;
-        padding: 8px 20px;
-        border-radius: 8px;
-        font-size: 15px;
-        font-weight: bold;
-    }
-*/
-
 
     #trycamera {
         position: absolute;
