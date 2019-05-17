@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
+#content {
+    background-image: url("../Pictures/nordwood-themes-524102-unsplash (1).jpg");
+    background-size: 100% 100%;
+    z-index: -1;
+    background-repeat: no-repeat;
+}
+
 #font {
     font-family: 'Lato', sans-serif;
 
@@ -13,10 +20,7 @@
     text-align: center;
 }
 
-#logo {
-    position: relative;
-    bottom: 75px;
-}
+
 
 #submit {
     margin: 1vh !important;
@@ -67,14 +71,24 @@
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
+#inner {
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: -5vh auto;
+    width: 80%;
+    height: 60vh;
+    padding: 5vh;
+}
+
 #profileHolder {
-    position: absolute;
-    margin: 0;
+    /*    position: absolute;*/
+    margin: -10vh;
     padding: 20px;
-    height: 100%;
-    width: 50%;
-    border: solid 1px;
-    background-color: lightblue;
+    height: 300px;
+    width: 100%;
+    border: solid 0px;
+    /*    background-color: gray;*/
+    display: block;
+
 }
 
 #profileContent {
@@ -84,15 +98,17 @@
     right: 12.5%;
     width: 75%;
     height: 60%;
+    width: 100%;
 }
 
-#userprofile, #useraverage {
-    top: 20%;
+/*#userprofile,*/
+#useraverage {
+    top: 10%;
     margin: 10px;
 }
 
 #userid {
-    text-align: center;
+    /*    text-align: center;*/
     position: relative;
     font-size: 35pt;
 }
@@ -102,35 +118,48 @@
 }
 
 #userprofile {
-/*    border: solid black 1px;*/
-    position: relative;
+    /*    border: solid black 1px;*/
+    /*    position: relative;*/
+    /*    display: inline;*/
+    float: left;
     height: 130px !important;
     width: 130px !important;
     border-radius: 50%;
-    margin: 0 auto;
+    /*    margin: 0 auto;*/
     background-image: url(https://www.springboard.com/images/springboard/default-profile-mentor-rounded@2x.70dc0c67.png);
     background-position: center;
     background-size: 100%;
+
+    margin-right: 100px;
 }
 
 #useraverage {
-    text-align: center;
-    position: relative;
+    display: block;
+    /*    text-align: center;*/
+    /*    position: relative;*/
     font-size: 24pt !important;
+    margin-left: 2vh;
+    margin-top: -5vh;
+
 }
 
 #userlist {
-    position: absolute;
+    /*        position: absolute;*/
     text-align: left;
-    font-size: 24pt;
-    width: 50%;
+    font-size: 20pt;
+    /*    width: 100%;*/
     height: auto;
-    left: 50%;
+    width: 50%;
     padding: 10px;
     border-top: solid black 1px;
     border-bottom: solid black 1px;
-    max-height: 100%;
+
     overflow-y: auto;
+    margin-left: 20vh;
+    /*    margin-top: 10vh;*/
+    /*    display: block;*/
+    /*    text-decoration: none;*/
+
 }
 
 #userlist li {
@@ -331,8 +360,8 @@ a.article:hover {
 }
 
 #logo {
-    position: relative;
-    bottom: 75px;
+    margin-top: -10vh;
+    width: 50%;
 }
 
 #submit {
@@ -519,7 +548,7 @@ a.article:hover {
 #sidebarCollapse {
     width: 40px;
     height: 40px;
-    background: white;
+    background: rgb(247,247,247,0.2);
     cursor: pointer;
 }
 
@@ -552,20 +581,65 @@ a.article:hover {
     margin: 5px auto;
 }
 
+@media(max-width: 712px) {
+    #userlist {
+/*        display: none;*/
+        margin: 10vh 0 0 -5vh;
+        width: 100%;
+    }
+
+    #useraverage {
+        margin-top: 5vh;
+    }
+     #inner{
+        height: 80vh;
+    }
+}
+@media(max-width: 539px) {
+    #userlist {
+/*        display: none;*/
+        margin: 10vh 0 0 -5vh;
+        width: 100%;
+    }
+
+    #useraverage {
+        margin-top: -10vh;
+    }
+    #userid{
+        margin: 0 -20vh 0 0vh;
+    }
+    #inner{
+        height: 80vh;
+    }
+}
+
 /*Media 500*/
 @media(max-width: 500px) {
-    
+    #logo {
+        width: 80%;
+    }
+
+    #inner {
+
+        height: 80vh;
+    }
+
     profileContent {
         border: solid 1px;
         top: 0%;
     }
-    
+
+    #inner {
+        margin: 5vh;
+    }
+
     #userid {
         position: relative;
-        top: 5%;
-        font-size: 24pt;
+        top: 20%;
+        left: 0%;
+        font-size: 30pt;
     }
-    
+
     #profileHolder {
         position: relative;
         bottom: 15%;
@@ -573,27 +647,21 @@ a.article:hover {
         height: 75%;
         border: solid 0px;
     }
-    
+
     #userprofile {
         position: relative;
         top: 0%;
+        left: -20%;
     }
-    
+
     #useraverage {
-        position: relative;
-        top: 0%;
+        margin: 0 0 0 2vh;
     }
-    
+
     #userlist {
-        position: relative;
-        width: 100%;
-        left: 0%;
-        bottom: 13%;
-        font-size: 18pt;
-        margin: 0;
-        max-height: 200px;
+      
     }
-    
+
     #left {
         font-size: 40px;
         color: gray;
@@ -630,8 +698,8 @@ a.article:hover {
 
     #sidebarCollapse1 {
         display: block;
-        opacity: 0.7;
-        background-color: white;
+        opacity: 1;
+        background-color: rgb(247,247,247);
         z-index: 1;
     }
 
@@ -774,17 +842,9 @@ a.article:hover {
         display: inline;
     }
 
-    #logoM {
-        position: absolute;
-        display: block;
-        width: 90vw;
-        z-index: -1;
-        top: 0%;
-    }
 
-    #logo {
-        display: none;
-    }
+
+
 
     #uploadContainer {
         display: inline-block;

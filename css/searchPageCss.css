@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
-
+#content {
+    background-image: url("../Pictures/nordwood-themes-524102-unsplash (1).jpg");
+    background-size: 100% 100%;
+    z-index: -1;
+    background-repeat: no-repeat;
+}
 #font {
     font-family: 'Lato', sans-serif;
 
@@ -97,7 +102,7 @@
 
 #eggs {
     float: right;
-    background: white;
+        background-color: rgb(247,247,247);
 }
 
 /*
@@ -450,6 +455,8 @@ a.article:hover {
     width: 40px;
     height: 40px;
     cursor: pointer;
+        background: rgb(247,247,247,0.2);
+
 }
 
 #sidebarCollapse span {
@@ -629,8 +636,8 @@ a.article:hover {
 
     #sidebarCollapse1 {
         display: block;
-        opacity: 0.7;
-        background-color: white;
+        opacity: 0.8;
+        background-color: rgb(247,247,247);
         z-index: 4;
     }
 

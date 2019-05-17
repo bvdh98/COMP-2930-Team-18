@@ -177,14 +177,14 @@ $(document).ready(function() {
         if (document.getElementById("fileUpload").value == "C:\\fakepath\\luckycharms.jpg") {
             document.getElementById("imagePreview").style = "background-image: url(https://cdn.influenster.com/media/product/image/Lucky_Charms_Original_Gluten-Free_Stuff.jpg.750x750_q85ss0_progressive.jpg)"
             };
-        if (document.getElementById("fileUpload").value == "C:\\fakepath\\crispyrice.jpg") {
-            document.getElementById("imagePreview").style = "background-image: url(https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_1b0d02a3-d5f5-42b7-acd3-ff71ab7fd3a2.JPG)"
+        if (document.getElementById("fileUpload").value == "C:\\fakepath\\crispyrice.png") {
+            document.getElementById("imagePreview").style = "background-image: url(https://www.nassaugrocery.com/wp-content/uploads/2016/11/Kellogg%E2%80%99s-Rice-Krispies-Cereal.png)"
             };
         if (document.getElementById("fileUpload").value == "C:\\fakepath\\honeycomb.jpg") {
             document.getElementById("imagePreview").style = "background-image: url(https://images-na.ssl-images-amazon.com/images/I/91Kxbx7ei9L._SY550_.jpg)"
             };
-        if (document.getElementById("fileUpload").value == "C:\\fakepath\\harvestcrunch.jpg") {
-            document.getElementById("imagePreview").style = "background-image: url(https://i5.walmartimages.ca/images/Large/969/535/6000198969535.jpg)"
+        if (document.getElementById("fileUpload").value == "C:\\fakepath\\harvestcrunch.png") {
+            document.getElementById("imagePreview").style = "background-image: url(https://www.quakeroats.ca/sites/quakeroats.ca/files/M221705_HC_Orgnl_560g_Eng.png)"
             };
     });
     
@@ -217,11 +217,11 @@ resetbtn
             getDetailsData("Cornflakes");
             $("#prodName").html("Cornflakes");
         }
-        if (file == "C:\\fakepath\\crispyrice.jpg") {
+        if (file == "C:\\fakepath\\crispyrice.png") {
             getDetailsData("Crispy Rice");
             $("#prodName").html("Crispy Rice");
         }
-        if (file == "C:\\fakepath\\harvestcrunch.jpg") {
+        if (file == "C:\\fakepath\\harvestcrunch.png") {
             getDetailsData("Harvest Crunch");
             $("#prodName").html("Harvest Crunch");
         }
@@ -267,13 +267,13 @@ resetbtn
             document.getElementById("searchResultsImg").style = "background-image: url(https://cdn.influenster.com/media/product/image/Lucky_Charms_Original_Gluten-Free_Stuff.jpg.750x750_q85ss0_progressive.jpg)"
         }
         if (name == "Crispy Rice") {
-            document.getElementById("searchResultsImg").style = "background-image: url(https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_1b0d02a3-d5f5-42b7-acd3-ff71ab7fd3a2.JPG)"
+            document.getElementById("searchResultsImg").style = "background-image: url(https://www.nassaugrocery.com/wp-content/uploads/2016/11/Kellogg%E2%80%99s-Rice-Krispies-Cereal.png)"
         }
         if (name == "HoneyComb") {
             document.getElementById("searchResultsImg").style = "background-image: url(https://images-na.ssl-images-amazon.com/images/I/91Kxbx7ei9L._SY550_.jpg)"
         }
         if (name == "Harvest Crunch") {
-            document.getElementById("searchResultsImg").style = "background-image: url(https://i5.walmartimages.ca/images/Large/969/535/6000198969535.jpg)"
+            document.getElementById("searchResultsImg").style = "background-image: url(https://www.quakeroats.ca/sites/quakeroats.ca/files/M221705_HC_Orgnl_560g_Eng.png)"
         }
     };
     
