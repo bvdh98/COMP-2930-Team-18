@@ -87,16 +87,22 @@
                     </button>
                 </div>
             </nav>
+            <div class="text-center" id="logoContainer">
+                <img src="./Pictures/Logo.png" id="logo" class="rounded animated bounceIn" alt="logo">
+            </div>
 
+            <div id="inner" class="row">
+                <div id="profileContent">
+                    <div id="profileHolder">
+                        <div id="userprofile"></div>
+                        <div id="userid"></div>
 
-            <div id="userid"><span>Welcome back, </span></div>
-            <div id="profileContent">
-                <div id="profileHolder">
-                    <div id="userprofile"></div>
-                    <div id="useraverage">Your average score: <span id="calcAverage"></span><span>!</span></div>
-                </div>
-                <div id="userlist"><u>Your List</u><span id="listPlus">+</span>
+                        <div class="col-12" id="useraverage"><br>
+                            Your average score: <span id="calcAverage"></span><span>!</span></div>
+                    </div>
+                    <div id="userlist" class="col-12">Your List<span id="listPlus">+</span>
 
+                    </div>
                 </div>
             </div>
         </div>
@@ -120,7 +126,6 @@
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
-
     </script>
 
 
@@ -139,6 +144,4 @@
 
     <script src="./js/profile.js"></script>
 
-</body>
-
-</html>
+</body></html>

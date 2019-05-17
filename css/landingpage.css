@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+html{
+padding: 20px;
+}
 .font {
     font-family: 'Roboto', sans-serif;
 
