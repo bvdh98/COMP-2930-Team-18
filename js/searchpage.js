@@ -196,7 +196,7 @@ $(document).ready(function() {
      $("button[title='Upload selected files']").on("click",function(){
          console.log("13323");
      });
-resetbtn
+
     $("#resetbtn").on("click",function(){
         $("#imagePreview").css("background-image","none");
      });
