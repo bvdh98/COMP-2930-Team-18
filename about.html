@@ -91,12 +91,27 @@
         <div id="biography" style="display: none"></div>
         <div id="aboutUs">About Us</div>
         <div id="aboutUsHolder">
-            <div id="appStory">Our Story<span>+</span></div>
-            <div id="R1">Spencer Wilson<span>+</span></div>
-            <div id="R2">Benjamin Harrison<span>+</span></div>
-            <div id="R3">Jialin Liu<span>+</span></div>
-            <div id="R4">RuMing Zhong<span>+</span></div>
-            <div id="R5">Gurden Singh Angi<span>+</span></div>
+            <div id="appStory">Our Story<span id="plus1">+</span></div>
+            <div id="story" style="display: none">So there I was, standing cluelessly in the grocery store aisle. “Which one of these cereals is healthier?” I thought to myself. How was I supposed to come to this conclusion? How am I supposed to know this stuff? I had to make a decision quickly because I was in a rush to get to my business meeting. A sudden rush of panic washed over me and I started grabbing cereals off the shelf at random. I sprinted through the checkout directly to my car, opened the door, and sat down in the driver seat with a sigh of relief. “Okay, let’s see what I got.” I thought to myself. I start opening grocery bags and pick up the cereal that I had just bought to take a better look at it. “What have I done….” I whispered to myself. I had grabbed “Sugar Puffs” in my panicked frenzy. I drove to my meeting feeling defeated. Not a single healthy choice was made that day.
+
+This is why we created FoodScore. To help our users make healthy decisions without having to know how to be healthy. No longer are the days of looking at those deceiving nutritional facts and ingredients. We have done all the research using trustworthy resources such as the Canadian National Food Guide, and Australian National Food Guide.</div>
+            
+            <div id="R1">Benjamin Harrison<span id="plus2">+</span></div>
+            <div id="bioB" class="bio" style="display: none"> <div id="picdiv1" class="picdivs"><img id="pic1" class="pics" src=ben.jpg></div><p id="name1" class="names">Benjamin Harrison</p><p id="about1" class="abouts"> I helped implement the main api of the app, which extracts texts from images of food labels. I am interested in back end, front end development and game design. I also realize how important environmental sustainability is. In high school I was involved with the local stream keepers society. We could further make this app more environmentally friendly by adding a score for how eco friendly a users food choice is.</p></div>
+            
+            <div id="R2">Gurden Singh Angi<span id="plus3">+</span></div>
+            <div id="bioG" class="bio" style="display: none"><div id="picdiv2" class="picdivs"><img id="pic2" class="pics" src=gurden.jpg></div><p id="name2" class="names">Gurden Singh Angi</p><p id="about2" class="abouts">I am currently studying computer systems technology at BCIT. As a part of our project we as a team have developed this app to ease the people in finding the health rating of their food, currently limited to cereals. My contributions include researching about cereals, their ingredients &amp; nutritional facts to come up with final ratings based on Canadian and australian food guidelines. I had a good hand in coming up with ideas related to design and user experience when they interact with our app. We hope that you all love FoodScore and implement it in your daily lives!</p></div>
+            
+            <div id="R3">Jialin Liu<span id="plus4">+</span></div>
+            <div id="bioJ" class="bio" style="display: none"><div id="picdiv3" class="picdivs"><img id="pic3" class="pics" src=david.jpg></div><p id="name3" class="names">Jialin Liu</p><p id="about3" class="abouts">I am a student at BCIT and I am taking the CST Diploma Program. I was working on API of our app which can read the name of the food labels from uploaded image. I am interested in Javascript, Java and love to learn new stuff by reaserching the API.Also, I helped our team to design the layout of the app and provided some suggestions for user interface. I hope users who using our app will have an excellent experience and a healthy life.</p></div>
+            
+            <div id="R4">RuMing Zhong<span id="plus5">+</span></div>
+            <div id="bioR" class="bio" style="display: none"><div id="picdiv4" class="picdivs"><img id="pic4" class="pics" src=roy.jpg></div><p id="name4" class="names">RuMing Zhong</p><p id="about4" class="abouts">I am currently a student at BCIT, and I enjoy programming. I mainly make the design for this website. I used bootstrap to create all the frontend page, which all are mobile friendly. I made the animation for index page and search page and I used javascript to set the timing for the animation. The sidebar menu, search bar, and upload-image preview took me a lot of time to make it, but I do enjoy to make it. I hope people feel comfortable with the design and use this app to make a healthy choice. Thanks for visiting our site!</p></div>
+    
+            <div id="R5">Spencer Wilson<span id="plus6">+</span></div>
+            <div id="bioS" class="bio" style="display: none"><div id="picdiv5" class="picdivs"><img id="pic5" class="pics" src=spencer.jpg></div><p id="name5" class="names">Spencer Wilson</p><p id="about5" class="abouts">I am currently a student at BCIT and I am taking the CST Diploma Program. I am passionate about programming and I love to write Javascript. I created all the javascript for the Search and Profile pages which includes: validation checks for the search bar, average score calculation on the profile page, scripts that get information from the database for the search results. I also implemented the firebase login, authentication, and database APIs. I helped create the html and css for the profile page, landing page, search page, and help page. I hope that people will use this app to make healthy choices in the future. Thanks for visiting our site!</p></div>
+            
+        </div>
         </div>
 
         <div class="overlay"></div>
@@ -112,12 +127,41 @@
 
 
     <!-- Toggling-->
+    <script src="./js/about.js"></script>
     <script src="./js/searchPageSidebarD.js"></script>
     <script src="./js/searchPageSidebarM.js"></script>
 
     <script src="./js/helppage.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    
 
 
-</body></html>
+</body>
+<!--
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+    
+        $(document).ready(function() {
+            $("#appStory").click(function(){
+                $("#story, #R1, #R2, #R3, #R4, #R5").toggle(200);
+          });
+            $("#R1").click(function(){
+                $("#appStory, #bioB, #R2, #R3, #R4, #R5").toggle(200);
+          });
+            $("#R2").click(function(){
+                $("#appStory, #bioG, #R1, #R3, #R4, #R5").toggle(200);
+          });
+            $("#R3").click(function(){
+                $("#appStory, #bioJ, #R2, #R1, #R4, #R5").toggle(200);
+          });
+            $("#R4").click(function(){
+                $("#appStory, #bioR, #R2, #R3, #R1, #R5").toggle(200);
+          });
+            $("#R5").click(function(){
+                $("#appStory, #bioS, #R2, #R3, #R4, #R1").toggle(200);
+          });
+        })
+    </script>
+-->
+</html>
