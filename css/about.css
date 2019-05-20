@@ -284,7 +284,7 @@ a.article:hover {
 
 #logo {
     position: relative;
-    bottom: 75px;
+    bottom: 50px;
 }
 
 #submit {
@@ -474,6 +474,24 @@ a.article:hover {
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
+.pics{
+    width: 150px;
+    height: auto;
+    float: left;
+    margin-left: auto;
+    margin-right: 5rem;
+    margin-bottom: 2rem;
+    border-radius: 50%;
+    border: 5px solid gray;
+    shape-outside: circle()
+}
+
+.picdivs{
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: auto;
+    width: 100%
+}
 #content {
     width: 100%;
     padding: 11px;
@@ -518,6 +536,54 @@ a.article:hover {
     margin: 5px auto;
 }
 
+.names{
+    clear: none;
+    text-align: left;
+    font-size: 22pt;
+    font-weight: bold;
+}
+
+.abouts{
+    text-align: left;
+}
+
+#aboutUs {
+/*    position: absolute;*/
+/*    top: 23%;*/
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 25pt;
+}
+
+#aboutUsHolder {
+    width: 100%;
+    height: auto;
+/*    position: absolute;*/
+    margin: 0;
+    padding: 0;
+    top: 25%;
+    left: 0%;
+}
+
+#appStory, #R1, #R2, #R3, #R4, #R5 {
+/*    position: relative;*/
+    top: 100%;
+    width: auto;
+    border: solid 1px;
+    height: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 5px;
+}
+
+#appStory span, #R1 span, #R2 span, #R3 span, #R4 span, #R5 span {
+    float: right;
+}
+
 @media(max-width: 765px) {
     #logo {
         width: 60%;
@@ -526,6 +592,25 @@ a.article:hover {
 
 /*Media 500*/
 @media(max-width: 500px) {
+    
+    .picdivs{
+        padding-left: 36.5%  
+    }
+    
+    .pics{
+        width: 120px
+    }
+    
+    .names{
+        font-size: 16pt;
+        text-align: center;
+        clear: left
+    }
+    
+    .abouts{
+        font-size: 12pt;
+        text-align: center  
+    }
     
     #aboutUs {
         position: absolute;
