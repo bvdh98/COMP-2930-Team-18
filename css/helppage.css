@@ -12,10 +12,9 @@
     color: #6C6262;
     font-weight: bolder;
     font-size: 1.35em;
-
 }
 
-#title{
+#title {
     color: #0099e1
 }
 
@@ -25,13 +24,24 @@
     font-size: 1.35em;
 }
 
-#image {
-    text-align: center;
+#maincontent {
+    background-color: white;
+    font-size: 12pt;
+    position: relative;
+    top: 0%;
+    border: solid 1px;
+    margin: 20px;
+    overflow-y: auto;
+    height: 400px;
+    padding: 20px;
 }
 
-#logo {
-    position: relative;
-    width: 50%;
+#maincontent li {
+    font-size: 14pt;
+}
+
+#image {
+    text-align: center;
 }
 
 #submit {
@@ -245,6 +255,10 @@ a.article:hover {
     CONTENT STYLE
 ----------------------------------------------------- */
 #content {
+    background-image: url("../Pictures/nordwood-themes-524102-unsplash (1).jpg");
+    background-size: 100% 100%;
+    z-index: -1;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
     transition: all 0.3s;
@@ -282,10 +296,15 @@ a.article:hover {
     text-align: center;
 }
 
+
 #logo {
     position: relative;
-    bottom: 75px;
+    width: 400px;
+    height: auto;
+    padding: 0;
+    margin: 0;
 }
+
 
 #submit {
     margin: 1vh !important;
@@ -546,7 +565,8 @@ a.article:hover {
         width: 100%;
         font-size: 18pt;
         font-weight: bold;
-        position: relative;
+        position: absolute;
+        top: 20%;
     }
     
 
@@ -559,11 +579,13 @@ a.article:hover {
     }
     
     #maincontent{
+        background: none;
+        border: none;
         width: 100%;
-        height: 310px;
+        height: 75%;
         position: absolute;
         padding: 10px;
-        top: 40%;
+        top: 20%;
         overflow-y: auto;
         margin: 2px;
         left: 0%;
@@ -743,9 +765,11 @@ a.article:hover {
 
 
     #logoM {
+        position: relative;
         display: block;
-        height: 200px;
-        margin: 0 auto
+        width: 90vw;
+        z-index: -1;
+        top: -60px;
     }
 
     #logo {

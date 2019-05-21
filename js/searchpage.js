@@ -14,6 +14,7 @@ $(document).ready(function() {
         $("#logo").show();
         $("#searchResultsImg").hide();
         $("#logo").css("position", "relative");
+        $("#logo").css("left", "");
         $("#logoContainer").css("top", "-5%");
     };
     
@@ -96,9 +97,9 @@ $(document).ready(function() {
             $("#detailsDropdown, #score, #listChoice, #detailsBox, #yes, #no, #prodName").toggle();
             $('#tryjs').hide();
             $("#searchResultsImg").show();
+            $("#logoContainer").css("top", "-65%");
             $("#logo").css("position", "absolute");
-            $("#logo").css("right", "0%");
-            $("#logoContainer").css("top", "-45%");
+            $("#logo").css("left", "25%");
         } else {
             window.alert("Sorry, that item could not be found :(");
         }
@@ -195,7 +196,7 @@ $(document).ready(function() {
      $("button[title='Upload selected files']").on("click",function(){
          console.log("13323");
      });
-resetbtn
+
     $("#resetbtn").on("click",function(){
         $("#imagePreview").css("background-image","none");
      });
@@ -206,12 +207,13 @@ resetbtn
         // File = the "fakepath" of the file currently in the input element.
         var file = document.getElementById("fileUpload").value
         if (file != "") {
-        $("#detailsDropdown, #score, #listChoice, #detailsBox, #yes, #no, #prodName, #tryImg").toggle();
+        $("#detailsDropdown, #score, #listChoice, #detailsBox, #yes, #no, #prodName").toggle();
         $("#uploadimg").hide();
+        $('#tryImg').removeClass("forImageUpload");
         $("#logo").show();
+        $("#logoContainer").css("top", "-65%");
         $("#logo").css("position", "absolute");
-        $("#logo").css("right", "0%");
-        $("#logoContainer").css("top", "-45%");
+        $("#logo").css("left", "25%");
         };
         if (file == "C:\\fakepath\\cornflakes.jpg") {
             getDetailsData("Cornflakes");
