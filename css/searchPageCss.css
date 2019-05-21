@@ -536,19 +536,20 @@ a.article:hover {
 
     #score {
         left: 0;
-        top: 0;
+            top: 45%;
+        font-size: 30pt
     }
     
     #listChoice {
         left: 0;
-        top: 0;
+            top: 55%;
         right: 0;
     }
     
     #prodName {
         position: relative;
         left: 0;
-        top: 0%;
+            top: 40%;
     }
     
     #uploadimg {
@@ -598,7 +599,7 @@ a.article:hover {
         position: absolute;
         width: 100%;
         left: 0;
-        top: 110%;
+            top: 175%;
         max-height: 270px;
     }
 
