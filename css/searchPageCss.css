@@ -474,7 +474,7 @@ a.article:hover {
 #content {
     width: 100%;
     padding: 20px;
-    min-height: 100vh;
+    min-height: 120vh;
     transition: all 0.3s;
 }
 
@@ -538,7 +538,7 @@ a.article:hover {
     }
 }
 
-@media(max-width: 765px) and (min-width:579px){
+@media(max-width: 765px) and (min-width:579px) {
     #logo {
         width: 60%;
 
@@ -604,25 +604,26 @@ a.article:hover {
 @media(max-width: 500px) {
 
     #testtest {
-        height: 100px;
+        height: 23px;
+        margin-top: 10vh;
     }
 
     #score {
         left: 0;
-            top: 45%;
+        top: 45%;
         font-size: 30pt
     }
 
     #listChoice {
-        left: 0;
-            top: 55%;
+        left: 23%;
+        top: 55%;
         right: 0;
     }
 
     #prodName {
         position: relative;
         left: 0;
-            top: 40%;
+        top: 40%;
     }
 
     #uploadimg {
@@ -672,7 +673,7 @@ a.article:hover {
         position: absolute;
         width: 100%;
         left: 0;
-            top: 175%;
+        top: 195%;
         max-height: 270px;
     }
 
@@ -681,7 +682,14 @@ a.article:hover {
     }
 
     #yes {
-        width: 100px;
+        /*        width: 100px;*/
+        top: 100%;
+        left: 0%;
+    }
+
+    #no {
+        left: 30%;
+        top: 100%;
     }
 
     #detailsBox {
@@ -701,7 +709,7 @@ a.article:hover {
         font-size: 20px;
         border-radius: 10vh;
         position: absolute;
-        left: 25%;
+        left: 17%;
     }
 
     #camerabtn {
@@ -787,6 +795,7 @@ a.article:hover {
         z-index: 998;
         opacity: 0;
         transition: all 0.5s ease-in-out;
+        height: 120vh;
     }
 
     .overlay.active {
@@ -899,7 +908,7 @@ a.article:hover {
 
     #trycamera {
         position: absolute;
-        left: 0%;
+        left: 5%;
         top: 100%;
         opacity: 1;
         width: 100%;
