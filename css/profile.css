@@ -636,7 +636,7 @@ a.article:hover {
     #userid {
         position: relative;
         top: 20%;
-        left: 0%;
+        left: -40%;
         font-size: 30pt;
     }
 
