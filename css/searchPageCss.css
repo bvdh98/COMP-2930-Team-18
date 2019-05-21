@@ -523,7 +523,7 @@ a.article:hover {
     display: none;
 }
 
-@media(max-width: 993px) {
+@media(max-width: 993px)and (min-width:766px) {
     #yes {
         right: 10%;
     }
@@ -538,7 +538,7 @@ a.article:hover {
     }
 }
 
-@media(max-width: 765px) {
+@media(max-width: 765px) and (min-width:579px){
     #logo {
         width: 60%;
 
@@ -565,7 +565,7 @@ a.article:hover {
     }
 }
 
-@media(max-width: 578px) {
+@media(max-width: 578px) and (min-width:501px) {
     #listChoice {
         right: -50%;
     }
