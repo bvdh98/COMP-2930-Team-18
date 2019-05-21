@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./css/searchPageCss.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-<!--    <script defer src="https://use.fonfatawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>-->
+    <!--    <script defer src="https://use.fonfatawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
@@ -76,7 +76,7 @@
         <div id="content">
             <nav>
                 <div class="container-fluid">
-                    <!--button animation debug-->
+                    <!--button animation-->
                     <button type="button" id="sidebarCollapse" class="navbar-btn active">
                         <span></span>
                         <span></span>
@@ -118,60 +118,27 @@
                             <div class="uploadimg col-auto" id="uploadimg">
 
                                 <div class="upload-options file-field col-auto" id="uploadContainer">
-                                    <!--                                   img preview-->
+                                    <!--img preview-->
                                     <div class="file-preview col-auto">
-                                        <!--                                        <div id="imagePreview"></div>-->
                                         <div class="file-upload-wrapper file-drop-zone col-auto" id="imagePreview">
-
-
-
-                                            <!--                                            <div class="file-drop-zone-title">Drag &amp; drop files here …</div>-->
-                                            <!--
-                                            <div class="file-preview-thumbnails">
-                                            </div>
--->
                                             <div class="clearfix"></div>
                                             <div class="file-preview-status text-center text-success"></div>
                                             <div class="kv-fileinput-error file-error-message" style="display: none;"></div>
                                         </div>
                                     </div>
-
-
                                     <div>
                                         <div class="input-group file-caption-main col-auto">
                                             <div class="file-caption form-control  kv-fileinput-caption" tabindex="500">
-
-
-
                                                 <input class="file-caption-name" onkeydown="return false;" onpaste="return false;" placeholder="Select file...">
-                                                <!--
-                                                <button type="button" class="btn btn-info fileinput-upload fileinput-upload-button " id="imageSearchButton">Search</button>
-                                                
-                                                
-                                                
-                                                <button type="reset" value="reset" id="resetbtn" tabindex="500" class="btn btn-danger fileinput-remove fileinput-remove-button"><i class="glyphicon glyphicon-trash"></i> <span class="hidden-xs">Delete</span></button>
--->
                                             </div>
-                                            <!--                                       <input class="file-caption-name" onkeydown="return false;" onpaste="return false;" placeholder="Select file...">-->
                                             <div class="btn btn-success btn-file col-auto" id="one">
-
-
                                                 <input class="image-upload " type="file" id="fileUpload" accept="image/*" onchange="encodeImageFileAsURL(this)">
                                                 Pick Image
                                             </div>
-
                                             <button type="button" tabindex="500" class="btn btn-info fileinput-upload fileinput-upload-button col-auto" id="imageSearchButton">Search</button>
-
-
                                             <button type="reset" value="reset" id="resetbtn" tabindex="500" class="btn btn-danger col-auto fileinput-remove fileinput-remove-button"><i class="glyphicon glyphicon-trash"></i> <span class="hidden-xs">Delete</span></button>
                                             <button class="btn btn-secondary col-auto" id='iambtn'>Back</button>
-
                                         </div>
-
-
-
-
-
                                     </div>
                                 </div>
                             </div>
@@ -181,21 +148,25 @@
                 </div>
                 <!--end of col-->
             </div>
-            <div class="container" id="testing2">
-                <div class="row" id="testing">
-                    <div id="test2" class="col-sm-5">
-                    </div>
-                    <div id="test1" class="col-sm-2">
-                    </div>
-                    <div id="dropdownHolder" class="col-sm-5">
+
+            <!--            result page-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div id="detailsBox" style="display: none">
                             <div id="prodName" style="display: none"></div>
                             <div id="score" style="display: none"><span id="foodScore"></span>/10</div>
                             <div id="listChoice" style="display: none">Add to list?
                             <div id="yes" style="display: none">Yes</div>
                                 <div id="no" style="display: none">No</div>
                         </div>
-                        
-                        
+
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <!--                    detail list-->
+                    <div id="dropdownHolder" class="col-sm-5">
+
                         <div id="detailsDropdown" style="display: none">Details<span id="detailsPlus">+</span>
                             <li id="row1" style="display: none; color: green"></li>
                             <li id="row2" style="display: none; color: green"></li>
@@ -223,6 +194,7 @@
             appId: "1:773056439844:web:5803d640de8e0613"
         };
         firebase.initializeApp(firebaseConfig);
+
     </script>
 
 
@@ -251,31 +223,6 @@
     <!--    sidebar for mobile-->
     <script src="./js/searchPageSidebarM.js"></script>
 
+</body>
 
-<!--
-    <script>
-        function encodeImageFileAsURL(element) {
-            var file = element.files[0];
-            var reader = new FileReader();
-            var filename = file.name;
-
-            console.log(filename);
-
-            //            reader.onloadend = function() {
-            //                console.log('RESULT', reader)
-            //            }
-            reader.readAsDataURL(file);
-
-            //            var fu1 = document.getElementById("imageUpload").value;
-            //            console.log(fu1);
-
-            //            var output = document.getElementById('output');
-            //            output.src = URL.createObjectURL(event.target.files[0]);
-            //            console.log("123");
-
-        }
-    </script>
--->
-
-
-</body></html>
+</html>
