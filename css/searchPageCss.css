@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
+
 #content {
     background-image: url("../Pictures/nordwood-themes-524102-unsplash (1).jpg");
     background-size: 100% 100%;
     z-index: -1;
     background-repeat: no-repeat;
 }
+
 #font {
     font-family: 'Lato', sans-serif;
 
@@ -101,7 +103,7 @@
 
 #eggs {
     float: right;
-        background-color: rgb(247,247,247);
+    background-color: rgb(247, 247, 247);
 }
 
 #row1,
@@ -480,7 +482,7 @@ a.article:hover {
     width: 40px;
     height: 40px;
     cursor: pointer;
-        background: rgb(247,247,247,0.2);
+    background: rgb(247, 247, 247, 0.2);
 
 }
 
@@ -521,36 +523,107 @@ a.article:hover {
     display: none;
 }
 
+@media(max-width: 993px) {
+    #yes {
+        right: 10%;
+    }
+
+    #no {
+        right: -16%;
+    }
+
+    #logo {
+        width: 66%;
+        margin-top: 2vh;
+    }
+}
+
 @media(max-width: 765px) {
     #logo {
         width: 60%;
+
+    }
+
+    #yes {
+        right: -20%;
+        width: 35%;
+    }
+
+    #no {
+        right: -56%;
+        width: 35%;
+    }
+
+    #detailsDropdown {
+        right: 5%;
+        width: 116%;
+
+    }
+
+    #listChoice {
+        right: 30%;
+    }
+}
+
+@media(max-width: 578px) {
+    #listChoice {
+        right: -50%;
+    }
+
+    #detailsDropdown {
+        right: 4%;
+        width: 50%;
+        top: 60%;
+    }
+
+    #prodName {
+        right: -20%;
+    }
+
+    #yes {
+        width: 20%;
+        right: 80%;
+        top: 100%;
+
+    }
+
+    #no {
+        width: 20%;
+        right: 59%;
+        top: 100%;
+
+    }
+
+    #logo {
+        width: 70%;
+        margin-top: 5vh;
     }
 }
 
 /*Media 500*/
 @media(max-width: 500px) {
-    
+
     #testtest {
-    height: 100px;
+        height: 100px;
     }
 
     #score {
         left: 0;
         top: 0;
     }
-    
+
     #listChoice {
         left: 0;
         top: 0;
         right: 0;
     }
-    
+
     #prodName {
         position: relative;
         left: 0;
         top: 0%;
     }
-    
+
     #uploadimg {
         position: absolute;
         top: -70%;
@@ -673,7 +746,7 @@ a.article:hover {
     #sidebarCollapse1 {
         display: block;
         opacity: 0.8;
-        background-color: rgb(247,247,247);
+        background-color: rgb(247, 247, 247);
         z-index: 4;
     }
 
@@ -814,13 +887,13 @@ a.article:hover {
     }
 
 
-    
+
     #uploadContainer {
         margin: 0;
     }
 
-    .file-preview{
-        padding-right: 62px!important;
+    .file-preview {
+        padding-right: 62px !important;
     }
 
     #trycamera {
@@ -983,6 +1056,6 @@ a.article:hover {
     }
 
 }
-    }
+}
 
 }
