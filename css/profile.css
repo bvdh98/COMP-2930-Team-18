@@ -73,44 +73,27 @@
 
 #inner {
     background-color: rgba(255, 255, 255, 0.6);
-    margin: -5vh auto;
+    margin: 0 auto;
     width: 80%;
-    height: 60vh;
-    padding: 5vh;
+    height: auto;
+    padding: 0;
 }
 
-#profileHolder {
-    /*    position: absolute;*/
-    margin: -10vh;
-    padding: 20px;
-    height: 300px;
-    width: 100%;
-    border: solid 0px;
-    /*    background-color: gray;*/
-    display: block;
-
-}
-
-#profileContent {
-    position: relative;
-    top: 15%;
-    left: 12.5%;
-    right: 12.5%;
-    width: 75%;
-    height: 60%;
-    width: 100%;
-}
-
-/*#userprofile,*/
 #useraverage {
-    top: 10%;
-    margin: 10px;
+    position: relative;
+    text-align: center;
+    font-size: 24pt;
+    width: 100%;
+    top: -35%;
 }
 
 #userid {
-    /*    text-align: center;*/
     position: relative;
-    font-size: 35pt;
+    font-size: 24pt;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    top: -15%;
 }
 
 #listPlus {
@@ -118,48 +101,29 @@
 }
 
 #userprofile {
-    /*    border: solid black 1px;*/
-    /*    position: relative;*/
-    /*    display: inline;*/
-    float: left;
-    height: 130px !important;
-    width: 130px !important;
-    border-radius: 50%;
-    /*    margin: 0 auto;*/
+    position: relative;
+    width: 100px;
+    height: 100px;
     background-image: url(https://www.springboard.com/images/springboard/default-profile-mentor-rounded@2x.70dc0c67.png);
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
-
-    margin-right: 100px;
-}
-
-#useraverage {
-    display: block;
-    /*    text-align: center;*/
-    /*    position: relative;*/
-    font-size: 24pt !important;
-    margin-left: 2vh;
-    margin-top: -5vh;
-
+    margin: 0 auto;
+    width: 100%;
 }
 
 #userlist {
-    /*        position: absolute;*/
+    position: absolute;
     text-align: left;
     font-size: 20pt;
-    /*    width: 100%;*/
-    height: auto;
-    width: 50%;
-    padding: 10px;
     border-top: solid black 1px;
     border-bottom: solid black 1px;
-
     overflow-y: auto;
-    margin-left: 20vh;
-    /*    margin-top: 10vh;*/
-    /*    display: block;*/
-    /*    text-decoration: none;*/
-
+    height: auto;
+    width: 50%;
+    max-height: 180px;
+    top: 65%;
+    left: 25%;
 }
 
 #userlist li {
@@ -361,7 +325,7 @@ a.article:hover {
 
 #logo {
     margin-top: -10vh;
-    width: 50%;
+    width: 30%;
 }
 
 #submit {
@@ -618,26 +582,37 @@ a.article:hover {
     #logo {
         width: 80%;
     }
+    
+    #userlist {
+        margin: 0;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
 
     #inner {
-
-        height: 80vh;
+        height: auto;
+        width: 85%;
+        position: relative;
+        top: -5%;
+        padding: 0;
+        margin: 0 auto;
     }
 
     profileContent {
-        border: solid 1px;
         top: 0%;
-    }
-
-    #inner {
-        margin: 5vh;
+        width: 50%;
+        height: 100%;
     }
 
     #userid {
         position: relative;
-        top: 20%;
-        left: -40%;
+        text-align: center;
+        font-size: 23pt !important;
+        width: 100%;
+        margin: 0;
         font-size: 30pt;
+        padding: 0;
     }
 
     #profileHolder {
@@ -645,21 +620,21 @@ a.article:hover {
         bottom: 15%;
         width: 100%;
         height: 75%;
-        border: solid 0px;
     }
 
     #userprofile {
         position: relative;
         top: 0%;
-        left: -20%;
+        margin: 0 auto;
+        left: 0%;
     }
 
     #useraverage {
-        margin: 0 0 0 2vh;
-    }
-
-    #userlist {
-      
+        position: relative;
+        font-size: 23pt !important;
+        text-align: center;
+        top: 0%;
+        margin: 0;
     }
 
     #left {
