@@ -895,6 +895,7 @@ a.article:hover {
         margin: 0 auto;
         position: relative;
         top: -50px;
+        z-index: -1;
     }
 
     #logo {

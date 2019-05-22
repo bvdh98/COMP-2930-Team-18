@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-html{
-padding: 20px;
+html {
+    padding: 20px;
 }
+
 .font {
     font-family: 'Roboto', sans-serif;
 
@@ -22,7 +23,7 @@ padding: 20px;
 }
 
 #bg {
-    background-image: url("../Pictures/landingbg2.jpg");
+    background-image: url("../Pictures/landingbg2%20copy.jpg");
     height: 60vh;
     width: auto;
     background-size: cover;
@@ -193,6 +194,9 @@ h3::after {
 
 
 @media (max-width: 500px) {
+    #headt{
+        font-size: 3em;
+    }
 
     #Layer_1 {
         margin: -10vh 0 0 0;
@@ -209,10 +213,17 @@ h3::after {
     }
 
     #test {
-        margin: 0 0 0 0;
-
+        height: 66vh;
     }
 
+    .signin {
+        width: 55%;
+        margin-left: 0vh;
+
+    }
+    #footer{
+        margin-top: 1vh;
+    }
 
 
 

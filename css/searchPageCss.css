@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
+
 #content {
     background-image: url("../Pictures/nordwood-themes-524102-unsplash (1).jpg");
     background-size: 100% 100%;
     z-index: -1;
     background-repeat: no-repeat;
 }
+
 #font {
     font-family: 'Lato', sans-serif;
 
@@ -101,7 +103,7 @@
 
 #eggs {
     float: right;
-        background-color: rgb(247,247,247);
+    background-color: rgb(247, 247, 247);
 }
 
 #row1,
@@ -472,7 +474,7 @@ a.article:hover {
 #content {
     width: 100%;
     padding: 20px;
-    min-height: 100vh;
+    min-height: 120vh;
     transition: all 0.3s;
 }
 
@@ -480,7 +482,7 @@ a.article:hover {
     width: 40px;
     height: 40px;
     cursor: pointer;
-        background: rgb(247,247,247,0.2);
+    background: rgb(247, 247, 247, 0.2);
 
 }
 
@@ -521,36 +523,109 @@ a.article:hover {
     display: none;
 }
 
-@media(max-width: 765px) {
+@media(max-width: 993px)and (min-width:766px) {
+    #yes {
+        right: 10%;
+    }
+
+    #no {
+        right: -16%;
+    }
+
+    #logo {
+        width: 66%;
+        margin-top: 2vh;
+    }
+}
+
+@media(max-width: 765px) and (min-width:579px) {
     #logo {
         width: 60%;
+
+    }
+
+    #yes {
+        right: -20%;
+        width: 35%;
+    }
+
+    #no {
+        right: -56%;
+        width: 35%;
+    }
+
+    #detailsDropdown {
+        right: 5%;
+        width: 116%;
+
+    }
+
+    #listChoice {
+        right: 30%;
+    }
+}
+
+@media(max-width: 578px) and (min-width:501px) {
+    #listChoice {
+        right: -50%;
+    }
+
+    #detailsDropdown {
+        right: 4%;
+        width: 50%;
+        top: 60%;
+    }
+
+    #prodName {
+        right: -20%;
+    }
+
+    #yes {
+        width: 20%;
+        right: 80%;
+        top: 100%;
+
+    }
+
+    #no {
+        width: 20%;
+        right: 59%;
+        top: 100%;
+
+    }
+
+    #logo {
+        width: 70%;
+        margin-top: 5vh;
     }
 }
 
 /*Media 500*/
 @media(max-width: 500px) {
-    
+
     #testtest {
-    height: 100px;
+        height: 23px;
+        margin-top: 10vh;
     }
 
     #score {
         left: 0;
-        top: 0;
+        top: 45%;
+        font-size: 30pt
     }
-    
+
     #listChoice {
-        left: 0;
-        top: 0;
+        left: 23%;
+        top: 55%;
         right: 0;
     }
-    
+
     #prodName {
         position: relative;
         left: 0;
-        top: 0%;
+        top: 40%;
     }
-    
+
     #uploadimg {
         position: absolute;
         top: -70%;
@@ -598,7 +673,7 @@ a.article:hover {
         position: absolute;
         width: 100%;
         left: 0;
-        top: 110%;
+        top: 195%;
         max-height: 270px;
     }
 
@@ -607,7 +682,14 @@ a.article:hover {
     }
 
     #yes {
-        width: 100px;
+        /*        width: 100px;*/
+        top: 100%;
+        left: 0%;
+    }
+
+    #no {
+        left: 30%;
+        top: 100%;
     }
 
     #detailsBox {
@@ -627,7 +709,7 @@ a.article:hover {
         font-size: 20px;
         border-radius: 10vh;
         position: absolute;
-        left: 25%;
+        left: 17%;
     }
 
     #camerabtn {
@@ -673,7 +755,7 @@ a.article:hover {
     #sidebarCollapse1 {
         display: block;
         opacity: 0.8;
-        background-color: rgb(247,247,247);
+        background-color: rgb(247, 247, 247);
         z-index: 4;
     }
 
@@ -713,6 +795,7 @@ a.article:hover {
         z-index: 998;
         opacity: 0;
         transition: all 0.5s ease-in-out;
+        height: 120vh;
     }
 
     .overlay.active {
@@ -814,18 +897,18 @@ a.article:hover {
     }
 
 
-    
+
     #uploadContainer {
         margin: 0;
     }
 
-    .file-preview{
-        padding-right: 62px!important;
+    .file-preview {
+        padding-right: 62px !important;
     }
 
     #trycamera {
         position: absolute;
-        left: 0%;
+        left: 5%;
         top: 100%;
         opacity: 1;
         width: 100%;
@@ -981,5 +1064,8 @@ a.article:hover {
         position: absolute;
         right: 15%;
     }
+
+}
+}
 
 }
